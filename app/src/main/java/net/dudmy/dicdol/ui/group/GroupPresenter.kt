@@ -8,6 +8,10 @@ class GroupPresenter(private var view: GroupContract.View?,
                      private val adapterView: GroupAdapterContract.View,
                      private val repository: GroupRepository) : GroupContract.Presenter {
 
+    init {
+        adapterView.clickListener = { onItemClick(it) }
+    }
+
     override fun detachView() {
         this.view = null
     }
@@ -40,5 +44,17 @@ class GroupPresenter(private var view: GroupContract.View?,
                 }
             }
         })
+    }
+
+    override fun onItemClick(position: Int) {
+
+        if (position < 0 || position > adapterModel.getSize()) {
+            view?.toastOutOfPosition()
+            return
+        }
+
+        val group = adapterModel.getItem(position)
+
+        view?.startArtistPage(group)
     }
 }

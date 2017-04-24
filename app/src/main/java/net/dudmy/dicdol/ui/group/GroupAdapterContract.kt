@@ -13,10 +13,14 @@ interface GroupAdapterContract {
         fun getItem(position: Int): Group
 
         fun addItems(groups: List<Group>)
+
+        fun getSize(): Int
     }
 
     interface View {
 
         fun refresh()
+
+        var clickListener: ((Int) -> Unit)?
     }
 }

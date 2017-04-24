@@ -31,6 +31,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
         </activity>
+        <activity
+            android:name=".ui.groupdetail.GroupDetailActivity"
+            android:parentActivityName=".ui.MainActivity"
+            android:theme="@style/TranslucentTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.dudmy.dicdol.ui.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -1,14 +1,17 @@
 package net.dudmy.dicdol.ui.group
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_group.*
 import net.dudmy.dicdol.BaseFragment
 import net.dudmy.dicdol.R
+import net.dudmy.dicdol.data.Group
 import net.dudmy.dicdol.data.source.GroupRepository
+import net.dudmy.dicdol.ui.groupdetail.GroupDetailActivity
 import net.dudmy.dicdol.ui.views.OffsetItemDecoration
+import net.dudmy.dicdol.util.toast
 
 /**
  * Created by yujin on 2017. 4. 23..
@@ -70,6 +73,16 @@ class GroupFragment : BaseFragment(), GroupContract.View {
     }
 
     override fun showLoadingGroupsError() {
-        Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
+        context.toast("Loading Error")
+    }
+
+    override fun toastOutOfPosition() {
+        context.toast("Position Error")
+    }
+
+    override fun startArtistPage(group: Group) {
+        val intent = Intent(activity, GroupDetailActivity::class.java)
+        intent.putExtra("group", group)
+        startActivity(intent)
     }
 }

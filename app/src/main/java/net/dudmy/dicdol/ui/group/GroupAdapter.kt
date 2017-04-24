@@ -22,7 +22,7 @@ class GroupAdapter : RecyclerView.Adapter<GroupAdapter.ViewHolder>(), GroupAdapt
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_group, parent, false)
-        return ViewHolder(itemView)
+        return ViewHolder(itemView, clickListener)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -36,6 +36,8 @@ class GroupAdapter : RecyclerView.Adapter<GroupAdapter.ViewHolder>(), GroupAdapt
 
     override fun getItemCount(): Int = groups?.size ?: 0
 
+    override fun getSize(): Int = itemCount
+
     override fun getItem(position: Int) = groups!![position]
 
     override fun addItems(groups: List<Group>) {
@@ -46,10 +48,18 @@ class GroupAdapter : RecyclerView.Adapter<GroupAdapter.ViewHolder>(), GroupAdapt
         notifyDataSetChanged()
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    override var clickListener: ((Int) -> Unit)? = null
+
+    class ViewHolder(itemView: View, val clickListener: ((Int) -> Unit)?) : RecyclerView.ViewHolder(itemView) {
 
         val tvName: TextView = itemView.tv_name
         val tvAgency: TextView = itemView.tv_agency
         val ivGroup: ImageView = itemView.iv_group
+
+        init {
+            itemView.setOnClickListener {
+                clickListener?.invoke(adapterPosition)
+            }
+        }
     }
 }

@@ -13,5 +13,7 @@
     <dimen name="margin_4">4dp</dimen>
     <dimen name="margin_16">16dp</dimen>
 
+    <!-- Height -->
     <dimen name="border_height">0.3dp</dimen>
+    <dimen name="app_bar_height">300dp</dimen>
 </resources>
