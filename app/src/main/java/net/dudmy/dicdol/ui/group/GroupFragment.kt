@@ -2,11 +2,8 @@ package net.dudmy.dicdol.ui.group
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.fragment_group.*
 import net.dudmy.dicdol.BaseFragment
 import net.dudmy.dicdol.R
@@ -29,7 +26,6 @@ class GroupFragment : BaseFragment(), GroupContract.View {
         const val TAG = "GroupFragment"
 
         fun newInstance(type: String?): GroupFragment {
-
             val bundle = Bundle()
             bundle.putString("type", type)
 
@@ -39,8 +35,7 @@ class GroupFragment : BaseFragment(), GroupContract.View {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
-            = inflater.inflate(R.layout.fragment_group, container, false)
+    override fun getLayoutId(): Int = R.layout.fragment_group
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -53,12 +48,16 @@ class GroupFragment : BaseFragment(), GroupContract.View {
             addItemDecoration(OffsetItemDecoration(30))
         }
 
+        refresh_layout.setOnRefreshListener {
+            groupPresenter.loadGroups(type, true)
+        }
+
         groupPresenter = GroupPresenter(this, groupAdapter, groupAdapter, GroupRepository())
     }
 
     override fun onResume() {
         super.onResume()
-        groupPresenter.loadGroups(type)
+        groupPresenter.loadGroups(type, false)
     }
 
     override fun onDestroyView() {
@@ -67,7 +66,7 @@ class GroupFragment : BaseFragment(), GroupContract.View {
     }
 
     override fun setLoadingIndicator(active: Boolean) {
-        activity.progress_bar.visibility = if (active) View.VISIBLE else View.GONE
+        refresh_layout.isRefreshing = active
     }
 
     override fun showLoadingGroupsError() {

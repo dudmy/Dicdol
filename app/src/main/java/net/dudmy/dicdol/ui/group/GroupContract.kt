@@ -11,7 +11,7 @@ interface GroupContract {
 
     interface Presenter : BasePresenter {
 
-        fun loadGroups(type: String?)
+        fun loadGroups(type: String?, forceUpdate: Boolean)
     }
 
     interface View : BaseView {

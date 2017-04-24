@@ -12,12 +12,15 @@ class GroupPresenter(private var view: GroupContract.View?,
         this.view = null
     }
 
-    override fun loadGroups(type: String?) {
+    override fun loadGroups(type: String?, forceUpdate: Boolean) {
 
         view!!.setLoadingIndicator(true)
 
-        repository.getGroups(object : GroupRepository.LoadGroupsCallback {
+        if (forceUpdate) {
+            repository.refreshGroups()
+        }
 
+        repository.getGroups(object : GroupRepository.LoadGroupsCallback {
             override fun onGroupsLoaded(groups: List<Group>) {
                 val groupToShow = when (type) {
                     null -> groups

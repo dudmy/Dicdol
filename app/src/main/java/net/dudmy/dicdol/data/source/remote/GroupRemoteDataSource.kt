@@ -49,4 +49,9 @@ class GroupRemoteDataSource : GroupDataSource {
 
         return null
     }
+
+    override fun refreshGroups() {
+        // Not required because the {@link GroupRepository} handles the logic of refreshing the
+        // groups from all the available data sources.
+    }
 }

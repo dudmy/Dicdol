@@ -24,4 +24,9 @@ class GroupLocalDataSource : GroupDataSource {
             callback.onGroupsLoaded(groupJson.items!!)
         }
     }
+
+    override fun refreshGroups() {
+        // Not required because the {@link GroupRepository} handles the logic of refreshing the
+        // groups from all the available data sources.
+    }
 }

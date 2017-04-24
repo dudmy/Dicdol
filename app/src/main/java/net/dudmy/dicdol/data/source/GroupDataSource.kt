@@ -7,4 +7,6 @@ package net.dudmy.dicdol.data.source
 interface GroupDataSource {
 
     fun getGroups(callback: GroupRepository.LoadGroupsCallback)
+
+    fun refreshGroups()
 }
