@@ -1,0 +1,55 @@
+{
+	"version": "1.1.1",
+	"count": 8,
+	"items": [
+		{
+			"id": "twice",
+			"name": "TWICE (트와이스)",
+			"agency": "JYP 엔터테인먼트",
+			"image": "null",
+			"type": "girl"
+		}, {
+			"id": "bts",
+			"name": "방탄소년단",
+			"agency": "빅히트 엔터테인먼트",
+			"image": "null",
+			"type": "boy"
+		}, {
+			"id": "bigbang",
+			"name": "BIGBANG",
+			"agency": "YG 엔터테인먼트",
+			"image": "null",
+			"type": "boy"
+		}, {
+			"id": "ioi",
+			"name": "아이오아이 (I.O.I)",
+			"agency": "YMC 엔터테인먼트",
+			"image": "null",
+			"type": "girl"
+		}, {
+			"id": "redvelvet",
+			"name": "Red Velvet (레드벨벳)",
+			"agency": "SM 엔터테인먼트",
+			"image": "null",
+			"type": "girl"
+		}, {
+			"id": "kard",
+			"name": "K.A.R.D",
+			"agency": "DSP 미디어",
+			"image": "null",
+			"type": "coed"
+		}, {
+			"id": "vixx",
+			"name": "빅스",
+			"agency": "젤리피쉬 엔터테인먼트",
+			"image": "null",
+			"type": "boy"
+		}, {
+			"id": "day6",
+			"name": "DAY6 (데이식스)",
+			"agency": "JYP 엔터테인먼트",
+			"image": "null",
+			"type": "boy"
+		}
+	]
+}
