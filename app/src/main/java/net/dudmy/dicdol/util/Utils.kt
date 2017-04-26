@@ -14,7 +14,7 @@ import net.dudmy.dicdol.R
 fun ImageView.loadImage(url: String) {
 
     Glide.with(context)
-            .load(url)
+            .load(assetsPrefix + url)
             .centerCrop()
             .placeholder(R.drawable.sample_group)
             .into(this)

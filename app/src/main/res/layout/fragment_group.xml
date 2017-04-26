@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/refresh_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="80dp"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_group" />
+        android:paddingTop="@dimen/margin_16"
+        android:paddingBottom="@dimen/margin_16"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-</android.support.v4.widget.SwipeRefreshLayout>
+        <Button
+            android:id="@+id/btn_sort_name"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="이름순"
+            android:textSize="@dimen/text_10"
+            android:textColor="@color/text_selector"
+            android:background="@drawable/btn_circle"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:tag="name" />
+
+        <Button
+            android:id="@+id/btn_sort_agency"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="소속사순"
+            android:textSize="@dimen/text_10"
+            android:textColor="@color/text_selector"
+            android:background="@drawable/btn_circle"
+            android:tag="agency" />
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_group" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

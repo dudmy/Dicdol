@@ -2,24 +2,10 @@ package net.dudmy.dicdol.data
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.google.gson.annotations.SerializedName
 
 /**
  * Created by yujin on 2017. 4. 24..
  */
-
-class GroupJson {
-
-    @SerializedName("version")
-    var version: String = ""
-
-    @SerializedName("count")
-    var count: Int = 0
-
-    @SerializedName("items")
-    var items: List<Group>? = null
-
-}
 
 data class Group(val id: String = "",
                  val name: String = "",
@@ -45,4 +31,12 @@ data class Group(val id: String = "",
         dest?.writeString(image)
         dest?.writeString(type)
     }
+
+    fun getTypeStr(): String =
+            when (type) {
+                "boy" -> "보이그룹"
+                "girl" -> "걸그룹"
+                "coed" -> "혼성그룹"
+                else -> "알수없음"
+            }
 }

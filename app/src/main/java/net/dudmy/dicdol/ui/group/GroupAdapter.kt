@@ -30,6 +30,7 @@ class GroupAdapter : RecyclerView.Adapter<GroupAdapter.ViewHolder>(), GroupAdapt
         getItem(position).let {
             holder.tvName.text = it.name
             holder.tvAgency.text = it.agency
+            holder.tvType.text = it.getTypeStr()
             holder.ivGroup.loadImage(it.image)
         }
     }
@@ -37,6 +38,8 @@ class GroupAdapter : RecyclerView.Adapter<GroupAdapter.ViewHolder>(), GroupAdapt
     override fun getItemCount(): Int = groups?.size ?: 0
 
     override fun getSize(): Int = itemCount
+
+    override fun getItems(): List<Group> = groups!!
 
     override fun getItem(position: Int) = groups!![position]
 
@@ -54,6 +57,7 @@ class GroupAdapter : RecyclerView.Adapter<GroupAdapter.ViewHolder>(), GroupAdapt
 
         val tvName: TextView = itemView.tv_name
         val tvAgency: TextView = itemView.tv_agency
+        val tvType: TextView = itemView.tv_type
         val ivGroup: ImageView = itemView.iv_group
 
         init {

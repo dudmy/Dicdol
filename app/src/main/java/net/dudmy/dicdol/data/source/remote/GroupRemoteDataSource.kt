@@ -1,12 +1,14 @@
 package net.dudmy.dicdol.data.source.remote
 
 import com.google.gson.Gson
-import net.dudmy.dicdol.DDApplication
+import net.dudmy.dicdol.data.Group
 import net.dudmy.dicdol.data.source.GroupDataSource
-import net.dudmy.dicdol.data.GroupJson
 import net.dudmy.dicdol.data.source.GroupRepository
+import net.dudmy.dicdol.services.GroupService
 import net.dudmy.dicdol.util.PreferenceHelper
-import java.io.IOException
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 /**
  * Created by yujin on 2017. 4. 24..
@@ -16,38 +18,28 @@ class GroupRemoteDataSource : GroupDataSource {
 
     override fun getGroups(callback: GroupRepository.LoadGroupsCallback) {
 
-        val json = getStringAssets("group.json")
+        val groupService = GroupService.retrofit.create(GroupService::class.java)
+        val call = groupService.getGroupList()
 
-        if (json == null) {
-            callback.onDataNotAvailable()
-        } else {
-            val groupJson = Gson().fromJson(json, GroupJson::class.java)
+        call.enqueue(object : Callback<List<Group>> {
+            override fun onResponse(call: Call<List<Group>>?, response: Response<List<Group>>?) {
+                response?.let {
+                    if (!it.isSuccessful) {
+                        callback.onDataNotAvailable()
+                        return
+                    }
 
-            if (groupJson.items!!.isEmpty()) {
-                callback.onDataNotAvailable()
-            } else {
-                callback.onGroupsLoaded(groupJson.items!!)
+                    callback.onGroupsLoaded(it.body())
+
+                    // Save to local data source.
+                    PreferenceHelper.saveGroup(Gson().toJson(it.body()))
+                }
             }
 
-            PreferenceHelper.saveGroup(json)
-        }
-    }
-
-    private fun getStringAssets(file: String): String? {
-        try {
-            val inputStream = DDApplication.context.assets.open(file)
-            val buffer = ByteArray(inputStream.available())
-
-            inputStream.read(buffer)
-            inputStream.close()
-
-            return String(buffer)
-
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-
-        return null
+            override fun onFailure(call: Call<List<Group>>?, t: Throwable?) {
+                callback.onDataNotAvailable()
+            }
+        })
     }
 
     override fun refreshGroups() {

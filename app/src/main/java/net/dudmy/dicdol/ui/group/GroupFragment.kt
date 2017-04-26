@@ -21,7 +21,7 @@ class GroupFragment : BaseFragment(), GroupContract.View {
 
     private lateinit var groupPresenter: GroupPresenter
 
-    private val groupAdapter: GroupAdapter by lazy { GroupAdapter() }
+    private val buttonList by lazy { listOf(btn_sort_name, btn_sort_agency) }
 
     private var type: String? = null
 
@@ -45,6 +45,8 @@ class GroupFragment : BaseFragment(), GroupContract.View {
 
         type = arguments.getString("type")
 
+        val groupAdapter = GroupAdapter()
+
         recycler_view.run {
             layoutManager = LinearLayoutManager(context)
             adapter = groupAdapter
@@ -54,6 +56,8 @@ class GroupFragment : BaseFragment(), GroupContract.View {
         refresh_layout.setOnRefreshListener {
             groupPresenter.loadGroups(type, true)
         }
+
+        buttonList.map { it.setOnClickListener { groupPresenter.sortGroups(it) } }
 
         groupPresenter = GroupPresenter(this, groupAdapter, groupAdapter, GroupRepository())
     }
@@ -78,6 +82,11 @@ class GroupFragment : BaseFragment(), GroupContract.View {
 
     override fun toastOutOfPosition() {
         context.toast("Position Error")
+    }
+
+    override fun selectCurrentButton(selectButton: View) {
+        buttonList.map { it.isSelected = false }
+        selectButton.isSelected = true
     }
 
     override fun startArtistPage(group: Group) {

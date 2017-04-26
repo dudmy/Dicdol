@@ -10,6 +10,8 @@ interface GroupAdapterContract {
 
     interface Model {
 
+        fun getItems(): List<Group>
+
         fun getItem(position: Int): Group
 
         fun addItems(groups: List<Group>)
