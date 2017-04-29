@@ -17,10 +17,10 @@ class GroupLocalDataSource : GroupDataSource {
 
     override fun getGroups(callback: GroupRepository.LoadGroupsCallback) {
 
-        var json: String? = PreferenceHelper.loadGroup()
+        var json: String? = PreferenceHelper.loadGroups()
 
         if (json == null) {
-            json = getStringAssets("group.json")
+            json = getStringAssets("group/group.json")
         }
 
         if (json == null) {
@@ -59,5 +59,22 @@ class GroupLocalDataSource : GroupDataSource {
     override fun refreshGroups() {
         // Not required because the {@link GroupRepository} handles the logic of refreshing the
         // groups from all the available data sources.
+    }
+
+    override fun getGroup(groupId: String, callback: GroupRepository.LoadGroupCallback) {
+
+        var json: String? = PreferenceHelper.loadGroup(groupId)
+
+        if (json == null) {
+            json = getStringAssets("group/$groupId.json")
+        }
+
+        if (json == null) {
+            callback.onDataNotAvailable()
+            return
+        }
+
+        val group = Gson().fromJson(json, Group::class.java)
+        callback.onGroupLoaded(group)
     }
 }

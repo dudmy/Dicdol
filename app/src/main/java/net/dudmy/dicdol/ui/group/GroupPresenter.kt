@@ -6,8 +6,9 @@ import net.dudmy.dicdol.data.source.GroupRepository
 
 class GroupPresenter(private var view: GroupContract.View?,
                      private val adapterModel: GroupAdapterContract.Model,
-                     private val adapterView: GroupAdapterContract.View,
-                     private val repository: GroupRepository) : GroupContract.Presenter {
+                     private val adapterView: GroupAdapterContract.View) : GroupContract.Presenter {
+
+    private val repository = GroupRepository
 
     init {
         adapterView.clickListener = { onItemClick(it) }

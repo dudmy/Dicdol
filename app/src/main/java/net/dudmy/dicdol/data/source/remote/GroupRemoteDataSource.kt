@@ -32,7 +32,7 @@ class GroupRemoteDataSource : GroupDataSource {
                     callback.onGroupsLoaded(it.body())
 
                     // Save to local data source.
-                    PreferenceHelper.saveGroup(Gson().toJson(it.body()))
+                    PreferenceHelper.saveGroups(Gson().toJson(it.body()))
                 }
             }
 
@@ -45,5 +45,31 @@ class GroupRemoteDataSource : GroupDataSource {
     override fun refreshGroups() {
         // Not required because the {@link GroupRepository} handles the logic of refreshing the
         // groups from all the available data sources.
+    }
+
+    override fun getGroup(groupId: String, callback: GroupRepository.LoadGroupCallback) {
+
+        val groupService = GroupService.retrofit.create(GroupService::class.java)
+        val call = groupService.getGroup(groupId)
+
+        call.enqueue(object : Callback<Group> {
+            override fun onResponse(call: Call<Group>?, response: Response<Group>?) {
+                response?.let {
+                    if (it.isSuccessful.not()) {
+                        callback.onDataNotAvailable()
+                        return
+                    }
+
+                    callback.onGroupLoaded(it.body())
+
+                    // Save to local data source.
+                    PreferenceHelper.saveGroup(groupId, Gson().toJson(it.body()))
+                }
+            }
+
+            override fun onFailure(call: Call<Group>?, t: Throwable?) {
+                callback.onDataNotAvailable()
+            }
+        })
     }
 }

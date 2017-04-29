@@ -1,17 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="net.dudmy.dicdol.ui.groupdetail.GroupDetailActivity"
     tools:showIn="@layout/activity_group_detail">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_16"
-        android:text="@string/large_text" />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</android.support.v4.widget.NestedScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_agency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24"
+                android:paddingLeft="@dimen/margin_24"
+                android:paddingRight="@dimen/margin_24"
+                android:paddingBottom="@dimen/margin_4"
+                android:textSize="14sp"
+                tools:text="소속사: JYP 엔터테인먼트" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_24"
+                android:paddingRight="@dimen/margin_24"
+                android:paddingTop="@dimen/margin_4"
+                android:paddingBottom="@dimen/margin_4"
+                android:textSize="14sp"
+                tools:text="유형: 걸그룹" />
+
+            <TextView
+                android:id="@+id/tv_debut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_24"
+                android:paddingRight="@dimen/margin_24"
+                android:paddingTop="@dimen/margin_4"
+                android:paddingBottom="@dimen/margin_4"
+                android:textSize="14sp"
+                tools:text="데뷔: 2015.10.20" />
+
+            <TextView
+                android:id="@+id/tv_debut_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/margin_24"
+                android:paddingRight="@dimen/margin_24"
+                android:paddingTop="@dimen/margin_4"
+                android:paddingBottom="@dimen/margin_4"
+                android:textSize="14sp"
+                tools:text="데뷔곡: OOH-AHH하게" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24"
+                android:paddingLeft="@dimen/margin_24"
+                android:paddingRight="@dimen/margin_24"
+                android:textStyle="bold"
+                android:text="아티스트" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_artists"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="GridLayoutManager"
+                app:spanCount="3"
+                tools:listitem="@layout/item_simple_grid" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24"
+                android:paddingLeft="@dimen/margin_24"
+                android:paddingRight="@dimen/margin_24"
+                android:textStyle="bold"
+                android:text="앨범" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_albums"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="GridLayoutManager"
+                app:spanCount="3"
+                tools:listitem="@layout/item_simple_grid" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

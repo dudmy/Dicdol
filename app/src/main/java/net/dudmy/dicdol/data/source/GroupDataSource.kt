@@ -9,4 +9,6 @@ interface GroupDataSource {
     fun getGroups(callback: GroupRepository.LoadGroupsCallback)
 
     fun refreshGroups()
+
+    fun getGroup(groupId: String, callback: GroupRepository.LoadGroupCallback)
 }

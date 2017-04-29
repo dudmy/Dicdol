@@ -8,9 +8,8 @@ import kotlinx.android.synthetic.main.fragment_group.*
 import net.dudmy.dicdol.BaseFragment
 import net.dudmy.dicdol.R
 import net.dudmy.dicdol.data.Group
-import net.dudmy.dicdol.data.source.GroupRepository
 import net.dudmy.dicdol.ui.groupdetail.GroupDetailActivity
-import net.dudmy.dicdol.ui.views.OffsetItemDecoration
+import net.dudmy.dicdol.ui.views.LinearOffsetDecoration
 import net.dudmy.dicdol.util.toast
 
 /**
@@ -50,7 +49,7 @@ class GroupFragment : BaseFragment(), GroupContract.View {
         recycler_view.run {
             layoutManager = LinearLayoutManager(context)
             adapter = groupAdapter
-            addItemDecoration(OffsetItemDecoration(30))
+            addItemDecoration(LinearOffsetDecoration(30))
         }
 
         refresh_layout.setOnRefreshListener {
@@ -59,11 +58,7 @@ class GroupFragment : BaseFragment(), GroupContract.View {
 
         buttonList.map { it.setOnClickListener { groupPresenter.sortGroups(it) } }
 
-        groupPresenter = GroupPresenter(this, groupAdapter, groupAdapter, GroupRepository())
-    }
-
-    override fun onResume() {
-        super.onResume()
+        groupPresenter = GroupPresenter(this, groupAdapter, groupAdapter)
         groupPresenter.loadGroups(type, false)
     }
 
@@ -91,7 +86,7 @@ class GroupFragment : BaseFragment(), GroupContract.View {
 
     override fun startArtistPage(group: Group) {
         val intent = Intent(activity, GroupDetailActivity::class.java)
-        intent.putExtra("group", group)
+        intent.putExtra("groupId", group.id)
         startActivity(intent)
     }
 }

@@ -8,7 +8,7 @@ import net.dudmy.dicdol.data.source.remote.GroupRemoteDataSource
  * Created by yujin on 2017. 4. 23..
  */
 
-class GroupRepository : GroupDataSource {
+object GroupRepository : GroupDataSource {
 
     private val remoteDataSource by lazy { GroupRemoteDataSource() }
 
@@ -78,9 +78,46 @@ class GroupRepository : GroupDataSource {
         cacheIsDirty = true
     }
 
+    override fun getGroup(groupId: String, callback: LoadGroupCallback) {
+        if (cacheIsDirty) {
+             getGroupFromRemoteDataSource(groupId, callback)
+        } else {
+            localDataSource.getGroup(groupId, object : LoadGroupCallback {
+                override fun onGroupLoaded(group: Group) {
+                    cacheIsDirty = false
+                    callback.onGroupLoaded(group)
+                }
+
+                override fun onDataNotAvailable() {
+                    getGroupFromRemoteDataSource(groupId, callback)
+                }
+            })
+        }
+    }
+
+    private fun getGroupFromRemoteDataSource(groupId: String, callback: LoadGroupCallback) {
+        remoteDataSource.getGroup(groupId, object : LoadGroupCallback {
+            override fun onGroupLoaded(group: Group) {
+                cacheIsDirty = false
+                callback.onGroupLoaded(group)
+            }
+
+            override fun onDataNotAvailable() {
+                callback.onDataNotAvailable()
+            }
+        })
+    }
+
     interface LoadGroupsCallback {
 
         fun onGroupsLoaded(groups: List<Group>)
+
+        fun onDataNotAvailable()
+    }
+
+    interface LoadGroupCallback {
+
+        fun onGroupLoaded(group: Group)
 
         fun onDataNotAvailable()
     }

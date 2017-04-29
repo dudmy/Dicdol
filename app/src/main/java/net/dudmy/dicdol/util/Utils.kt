@@ -5,6 +5,7 @@ import android.nfc.FormatException
 import android.widget.ImageView
 import android.widget.Toast
 import com.bumptech.glide.Glide
+import jp.wasabeef.glide.transformations.CropCircleTransformation
 import net.dudmy.dicdol.R
 
 /**
@@ -16,6 +17,15 @@ fun ImageView.loadImage(url: String) {
     Glide.with(context)
             .load(assetsPrefix + url)
             .centerCrop()
+            .placeholder(R.drawable.sample_group)
+            .into(this)
+}
+
+fun ImageView.loadRoundImage(url: String) {
+
+    Glide.with(context)
+            .load(assetsPrefix + url)
+            .bitmapTransform(CropCircleTransformation(context))
             .placeholder(R.drawable.sample_group)
             .into(this)
 }
