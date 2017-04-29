@@ -55,14 +55,14 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
     }
 
     override fun showGroup(group: Group) {
-        group.run {
-            title = name
-            iv_group.loadImage(image)
+        group.let {
+            title = it.name
+            iv_group.loadImage(it.image)
 
-            tv_agency.text = "소속사: $agency"
-            tv_type.text = "유형: ${getTypeStr()}"
-            tv_debut.text = "데뷔: $debut"
-            tv_debut_song.text = "데뷔곡: $debutSong"
+            tv_agency.text = it.agency
+            tv_type.text = it.getTypeStr()
+            tv_debut.text = it.debut
+            tv_debut_song.text = it.debutSong
         }
     }
 

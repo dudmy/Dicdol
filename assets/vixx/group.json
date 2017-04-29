@@ -2,58 +2,54 @@
 	"id": "vixx",
 	"name": "빅스",
 	"agency": "젤리피쉬 엔터테인먼트",
-	"image": "group/vixx/profile.jpg",
+	"image": "vixx/profile.jpg",
 	"type": "boy",
 	"debut": "2012.05.24",
 	"debutSong": "SUPER HERO",
-	"artists": [
-		{
-			"id": "1",
-			"name": "라비",
-			"image": "vixx/artist/1/profile.jpg"
-		}, {
-			"id": "2",
-			"name": "켄",
-			"image": "vixx/artist/2/profile.jpg"
-		}, {
-			"id": "3",
-			"name": "레오",
-			"image": "vixx/artist/3/profile.jpg"
-		}, {
-			"id": "4",
-			"name": "홍빈",
-			"image": "vixx/artist/4/profile.jpg"
-		}, {
-			"id": "5",
-			"name": "엔",
-			"image": "vixx/artist/5/profile.jpg"
-		}, {
-			"id": "6",
-			"name": "혁",
-			"image": "vixx/artist/6/profile.jpg"
-		}
-	],
-	"albums": [
-		{
-			"id": "1",
-			"name": "hyde",
-			"image": "vixx/album/1/art.jpg"
-		}, {
-			"id": "2",
-			"name": "Voodoo",
-			"image": "vixx/album/2/art.jpg"
-		}, {
-			"id": "3",
-			"name": "Errpr",
-			"image": "vixx/album/3/art.jpg"
-		}, {
-			"id": "4",
-			"name": "Chained Up",
-			"image": "vixx/album/4/art.jpg"
-		}, {
-			"id": "5",
-			"name": "Kratos",
-			"image": "vixx/album/5/art.jpg"
-		}
-	]
+	"artists": [{
+		"id": "1",
+		"name": "라비",
+		"image": "vixx/artist/1/profile.jpg"
+	}, {
+		"id": "2",
+		"name": "켄",
+		"image": "vixx/artist/2/profile.jpg"
+	}, {
+		"id": "3",
+		"name": "레오",
+		"image": "vixx/artist/3/profile.jpg"
+	}, {
+		"id": "4",
+		"name": "홍빈",
+		"image": "vixx/artist/4/profile.jpg"
+	}, {
+		"id": "5",
+		"name": "엔",
+		"image": "vixx/artist/5/profile.jpg"
+	}, {
+		"id": "6",
+		"name": "혁",
+		"image": "vixx/artist/6/profile.jpg"
+	}],
+	"albums": [{
+		"id": "1",
+		"name": "hyde",
+		"image": "vixx/album/1/art.jpg"
+	}, {
+		"id": "2",
+		"name": "Voodoo",
+		"image": "vixx/album/2/art.jpg"
+	}, {
+		"id": "3",
+		"name": "Errpr",
+		"image": "vixx/album/3/art.jpg"
+	}, {
+		"id": "4",
+		"name": "Chained Up",
+		"image": "vixx/album/4/art.jpg"
+	}, {
+		"id": "5",
+		"name": "Kratos",
+		"image": "vixx/album/5/art.jpg"
+	}]
 }

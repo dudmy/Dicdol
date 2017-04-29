@@ -2,7 +2,7 @@
   "id": "bts",
   "name": "방탄소년단",
   "agency": "빅히트 엔터테인먼트",
-  "image": "group/bts/profile.jpg",
+  "image": "bts/profile.jpg",
   "type": "boy",
   "debut": "2013.06.12",
   "debutSong": "No More Dream",
@@ -44,20 +44,20 @@
     "name": "DARK&WILD",
     "image": "bts/album/2/art.jpg"
   }, {
-    "id": "4",
+    "id": "3",
     "name": "화양연화 Young Forever",
+    "image": "bts/album/3/art.jpg"
+  }, {
+    "id": "4",
+    "name": "WINGS",
     "image": "bts/album/4/art.jpg"
   }, {
     "id": "5",
-    "name": "WINGS",
+    "name": "YOUTH",
     "image": "bts/album/5/art.jpg"
   }, {
     "id": "6",
-    "name": "YOUTH",
-    "image": "bts/album/6/art.jpg"
-  }, {
-    "id": "7",
     "name": "YOU NEVER WALK ALONE",
-    "image": "bts/album/7/art.jpg"
+    "image": "bts/album/6/art.jpg"
   }]
 }

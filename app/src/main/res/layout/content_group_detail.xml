@@ -13,59 +13,97 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_agency_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginStart="@dimen/margin_24"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="소속사" />
 
             <TextView
                 android:id="@+id/tv_agency"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_24"
-                android:paddingLeft="@dimen/margin_24"
-                android:paddingRight="@dimen/margin_24"
-                android:paddingBottom="@dimen/margin_4"
+                android:layout_alignBaseline="@id/tv_agency_label"
+                android:layout_toEndOf="@id/tv_agency_label"
+                android:layout_marginLeft="@dimen/margin_24"
                 android:textSize="14sp"
-                tools:text="소속사: JYP 엔터테인먼트" />
+                tools:text="JYP 엔터테인먼트" />
+
+            <TextView
+                android:id="@+id/tv_type_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_agency_label"
+                android:layout_alignStart="@+id/tv_agency_label"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="유형" />
 
             <TextView
                 android:id="@+id/tv_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/margin_24"
-                android:paddingRight="@dimen/margin_24"
-                android:paddingTop="@dimen/margin_4"
-                android:paddingBottom="@dimen/margin_4"
+                android:layout_alignBaseline="@+id/tv_type_label"
+                android:layout_alignStart="@+id/tv_agency"
                 android:textSize="14sp"
-                tools:text="유형: 걸그룹" />
+                tools:text="걸그룹" />
+
+            <TextView
+                android:id="@+id/tv_debut_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_type_label"
+                android:layout_alignStart="@+id/tv_type_label"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="데뷔" />
 
             <TextView
                 android:id="@+id/tv_debut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/margin_24"
-                android:paddingRight="@dimen/margin_24"
-                android:paddingTop="@dimen/margin_4"
-                android:paddingBottom="@dimen/margin_4"
+                android:layout_alignBaseline="@+id/tv_debut_label"
+                android:layout_alignStart="@+id/tv_agency"
                 android:textSize="14sp"
-                tools:text="데뷔: 2015.10.20" />
+                tools:text="2015.10.20" />
+
+            <TextView
+                android:id="@+id/tv_debut_song_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_debut_label"
+                android:layout_alignStart="@+id/tv_debut_label"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="데뷔곡" />
 
             <TextView
                 android:id="@+id/tv_debut_song"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/margin_24"
-                android:paddingRight="@dimen/margin_24"
-                android:paddingTop="@dimen/margin_4"
-                android:paddingBottom="@dimen/margin_4"
+                android:layout_alignBaseline="@+id/tv_debut_song_label"
+                android:layout_alignStart="@+id/tv_agency"
                 android:textSize="14sp"
-                tools:text="데뷔곡: OOH-AHH하게" />
+                tools:text="OOH-AHH하게" />
 
             <TextView
+                android:id="@+id/tv_artists"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginTop="@dimen/margin_36"
+                android:layout_below="@id/tv_debut_song_label"
                 android:paddingLeft="@dimen/margin_24"
                 android:paddingRight="@dimen/margin_24"
                 android:textStyle="bold"
@@ -75,14 +113,17 @@
                 android:id="@+id/rv_artists"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/tv_artists"
                 app:layoutManager="GridLayoutManager"
                 app:spanCount="3"
                 tools:listitem="@layout/item_simple_grid" />
 
             <TextView
+                android:id="@+id/tv_albums"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_24"
+                android:layout_below="@id/rv_artists"
                 android:paddingLeft="@dimen/margin_24"
                 android:paddingRight="@dimen/margin_24"
                 android:textStyle="bold"
@@ -92,10 +133,11 @@
                 android:id="@+id/rv_albums"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/tv_albums"
                 app:layoutManager="GridLayoutManager"
                 app:spanCount="3"
                 tools:listitem="@layout/item_simple_grid" />
-        </LinearLayout>
+        </RelativeLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
