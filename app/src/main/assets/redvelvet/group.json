@@ -1,0 +1,55 @@
+{
+  "id": "redvelvet",
+  "name": "Red Velvet (레드벨벳)",
+  "agency": "SM 엔터테인먼트",
+  "image": "group/redvelvet/profile.jpg",
+  "type": "girl",
+  "debut": "2014.08.04",
+  "debutSong": "행복 (Happiness)",
+  "artists": [
+    {
+      "id": "1",
+      "name": "웬디",
+      "image": "redvelvet/artist/1/profile.jpg"
+    }, {
+      "id": "2",
+      "name": "슬기",
+      "image": "redvelvet/artist/2/profile.jpg"
+    }, {
+      "id": "3",
+      "name": "아이린",
+      "image": "redvelvet/artist/3/profile.jpg"
+    }, {
+      "id": "4",
+      "name": "조이",
+      "image": "redvelvet/artist/4/profile.jpg"
+    }, {
+      "id": "5",
+      "name": "예리",
+      "image": "redvelvet/artist/5/profile.jpg"
+    }
+  ],
+  "albums": [
+    {
+      "id": "1",
+      "name": "Ice Cream Cake",
+      "image": "redvelvet/album/1/art.jpg"
+    }, {
+      "id": "2",
+      "name": "The Red",
+      "image": "redvelvet/album/2/art.jpg"
+    }, {
+      "id": "3",
+      "name": "The Velvet",
+      "image": "redvelvet/album/3/art.jpg"
+    }, {
+      "id": "4",
+      "name": "Russian Roulette",
+      "image": "redvelvet/album/4/art.jpg"
+    }, {
+      "id": "5",
+      "name": "Rookie",
+      "image": "redvelvet/album/5/art.jpg"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+	"id": "twice",
+	"name": "TWICE (트와이스)",
+	"agency": "JYP 엔터테인먼트",
+	"image": "group/twice/profile.jpg",
+	"type": "girl",
+	"debut": "2015.10.20",
+	"debutSong": "OOH-AHH하게",
+	"artists": [
+		{
+			"id": "1",
+			"name": "나연",
+			"image": "twice/artist/1/profile.jpg"
+		}, {
+			"id": "2",
+			"name": "정연",
+			"image": "twice/artist/2/profile.jpg"
+		}, {
+			"id": "3",
+			"name": "모모",
+			"image": "twice/artist/3/profile.jpg"
+		}, {
+			"id": "4",
+			"name": "사나",
+			"image": "twice/artist/4/profile.jpg"
+		}, {
+			"id": "5",
+			"name": "지효",
+			"image": "twice/artist/5/profile.jpg"
+		}, {
+			"id": "6",
+			"name": "미나",
+			"image": "twice/artist/6/profile.jpg"
+		}, {
+			"id": "7",
+			"name": "다현",
+			"image": "twice/artist/7/profile.jpg"
+		}, {
+			"id": "8",
+			"name": "채영",
+			"image": "twice/artist/8/profile.jpg"
+		}, {
+			"id": "9",
+			"name": "쯔위",
+			"image": "twice/artist/9/profile.jpg"
+		}
+	],
+	"albums": [
+		{
+			"id": "1",
+			"name": "THE STORY BEGINS",
+			"image": "twice/album/1/art.jpg"
+		}, {
+			"id": "2",
+			"name": "PAGE TWO",
+			"image": "twice/album/2/art.jpg"
+		}, {
+			"id": "3",
+			"name": "TWICEcoaster : LANE 1",
+			"image": "twice/album/3/art.jpg"
+		}, {
+			"id": "4",
+			"name": "TWICEcoaster : LANE 2",
+			"image": "twice/album/4/art.jpg"
+		}
+	]
+}

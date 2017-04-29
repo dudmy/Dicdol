@@ -1,0 +1,63 @@
+{
+  "id": "bts",
+  "name": "방탄소년단",
+  "agency": "빅히트 엔터테인먼트",
+  "image": "group/bts/profile.jpg",
+  "type": "boy",
+  "debut": "2013.06.12",
+  "debutSong": "No More Dream",
+  "artists": [{
+    "id": "1",
+    "name": "랩몬스터",
+    "image": "bts/artist/1/profile.jpg"
+  }, {
+    "id": "2",
+    "name": "슈가",
+    "image": "bts/artist/2/profile.jpg"
+  }, {
+    "id": "3",
+    "name": "진",
+    "image": "bts/artist/3/profile.jpg"
+  }, {
+    "id": "4",
+    "name": "제이홉",
+    "image": "bts/artist/4/profile.jpg"
+  }, {
+    "id": "5",
+    "name": "지민",
+    "image": "bts/artist/5/profile.jpg"
+  }, {
+    "id": "6",
+    "name": "뷔",
+    "image": "bts/artist/6/profile.jpg"
+  }, {
+    "id": "7",
+    "name": "정국",
+    "image": "bts/artist/7/profile.jpg"
+  }],
+  "albums": [{
+    "id": "1",
+    "name": "Skool Luv Affair Special Addition",
+    "image": "bts/album/1/art.jpg"
+  }, {
+    "id": "2",
+    "name": "DARK&WILD",
+    "image": "bts/album/2/art.jpg"
+  }, {
+    "id": "4",
+    "name": "화양연화 Young Forever",
+    "image": "bts/album/4/art.jpg"
+  }, {
+    "id": "5",
+    "name": "WINGS",
+    "image": "bts/album/5/art.jpg"
+  }, {
+    "id": "6",
+    "name": "YOUTH",
+    "image": "bts/album/6/art.jpg"
+  }, {
+    "id": "7",
+    "name": "YOU NEVER WALK ALONE",
+    "image": "bts/album/7/art.jpg"
+  }]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "blackpink",
+  "name": "BLACKPINK",
+  "agency": "YG 엔터테인먼트",
+  "image": "group/blackpink/profile.jpg",
+  "type": "girl",
+  "debut": "2016.08.08",
+  "debutSong": "붐바야",
+  "artists": [{
+    "id": "1",
+    "name": "지수",
+    "image": "blackpink/artist/1/profile.jpg"
+  }, {
+    "id": "2",
+    "name": "제니",
+    "image": "blackpink/artist/2/profile.jpg"
+  }, {
+    "id": "3",
+    "name": "로제",
+    "image": "blackpink/artist/3/profile.jpg"
+  }, {
+    "id": "4",
+    "name": "리사",
+    "image": "blackpink/artist/4/profile.jpg"
+  }],
+  "albums": [{
+    "id": "1",
+    "name": "SQUARE ONE",
+    "image": "blackpink/album/1/art.jpg"
+  }, {
+    "id": "2",
+    "name": "SQUARE TWO",
+    "image": "blackpink/album/2/art.jpg"
+  }]
+}

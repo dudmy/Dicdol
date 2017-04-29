@@ -20,7 +20,7 @@ class GroupLocalDataSource : GroupDataSource {
         var json: String? = PreferenceHelper.loadGroups()
 
         if (json == null) {
-            json = getStringAssets("group/group.json")
+            json = getStringAssets("group.json")
         }
 
         if (json == null) {
@@ -66,7 +66,7 @@ class GroupLocalDataSource : GroupDataSource {
         var json: String? = PreferenceHelper.loadGroup(groupId)
 
         if (json == null) {
-            json = getStringAssets("group/$groupId.json")
+            json = getStringAssets("$groupId/group.json")
         }
 
         if (json == null) {
