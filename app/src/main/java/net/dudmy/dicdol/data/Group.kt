@@ -1,32 +1,43 @@
 package net.dudmy.dicdol.data
 
+import io.realm.RealmList
+import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
+import io.realm.annotations.RealmClass
+
 /**
  * Created by yujin on 2017. 4. 24..
  */
 
-data class Group(val id: String = "",
+@RealmClass
+open class Group(
 
-                 val name: String = "",
+        @PrimaryKey open var id: String = "",
 
-                 val agency: String = "",
+        open var name: String = "",
 
-                 val image: String = "",
+        open var agency: String = "",
 
-                 val type: String = "",
+        open var image: String = "",
 
-                 val debut: String = "",
+        open var type: String = "",
 
-                 val debutSong: String = "",
+        open var debut: String = "",
 
-                 val artists: List<Artist>? = null,
+        open var debutSong: String = "",
 
-                 val albums: List<Album>? = null) {
+        open var artists: RealmList<Artist>? = null,
 
-    fun getTypeStr(): String =
-            when (type) {
-                "boy" -> "보이그룹"
-                "girl" -> "걸그룹"
-                "coed" -> "혼성그룹"
-                else -> "알수없음"
-            }
+        open var albums: RealmList<Album>? = null
+
+) : RealmObject() {
+
+    fun getTypeStr(): String = when (type) {
+        "boy" -> "보이그룹"
+        "girl" -> "걸그룹"
+        "coed" -> "혼성그룹"
+        else -> "알수없음"
+    }
+
+    fun needRefresh(): Boolean = type.isEmpty() or debut.isEmpty()
 }

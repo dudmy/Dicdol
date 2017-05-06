@@ -1,13 +1,10 @@
 package net.dudmy.dicdol.data.source.local
 
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import net.dudmy.dicdol.DDApplication
+import io.realm.Realm
 import net.dudmy.dicdol.data.Group
 import net.dudmy.dicdol.data.source.GroupDataSource
-import net.dudmy.dicdol.data.source.GroupRepository
-import net.dudmy.dicdol.util.PreferenceHelper
-import java.io.IOException
+import net.dudmy.dicdol.data.source.GroupDataSource.LoadGroupCallback
+import net.dudmy.dicdol.data.source.GroupDataSource.LoadGroupsCallback
 
 /**
  * Created by yujin on 2017. 4. 24..
@@ -15,45 +12,23 @@ import java.io.IOException
 
 class GroupLocalDataSource : GroupDataSource {
 
-    override fun getGroups(callback: GroupRepository.LoadGroupsCallback) {
+    override fun getGroups(callback: LoadGroupsCallback) {
+        var groups: List<Group>? = null
 
-        var json: String? = PreferenceHelper.loadGroups()
+        Realm.getDefaultInstance().use {
+            it.executeTransaction {
+                val result = it.where(Group::class.java)
+                        .findAll()
 
-        if (json == null) {
-            json = getStringAssets("group.json")
+                groups = it.copyFromRealm(result)
+            }
         }
 
-        if (json == null) {
+        if (groups?.isEmpty() ?: true) {
             callback.onDataNotAvailable()
-            return
+        } else {
+            callback.onGroupsLoaded(groups!!)
         }
-
-        val groupList: List<Group> =
-                Gson().fromJson(
-                        json,
-                        object : TypeToken<ArrayList<Group>>(){}.type)
-
-        when {
-            groupList.isEmpty() -> callback.onDataNotAvailable()
-            else -> callback.onGroupsLoaded(groupList)
-        }
-    }
-
-    private fun getStringAssets(file: String): String? {
-        try {
-            val inputStream = DDApplication.context.assets.open(file)
-            val buffer = ByteArray(inputStream.available())
-
-            inputStream.read(buffer)
-            inputStream.close()
-
-            return String(buffer)
-
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-
-        return null
     }
 
     override fun refreshGroups() {
@@ -61,20 +36,41 @@ class GroupLocalDataSource : GroupDataSource {
         // groups from all the available data sources.
     }
 
-    override fun getGroup(groupId: String, callback: GroupRepository.LoadGroupCallback) {
+    override fun getGroup(groupId: String, callback: LoadGroupCallback) {
+        var group: Group? = null
 
-        var json: String? = PreferenceHelper.loadGroup(groupId)
+        Realm.getDefaultInstance().use {
+            it.executeTransaction {
+                val result = it.where(Group::class.java)
+                        .equalTo("id", groupId)
+                        .findFirst()
 
-        if (json == null) {
-            json = getStringAssets("$groupId/group.json")
+                group = it.copyFromRealm(result)
+            }
         }
 
-        if (json == null) {
+        if (group?.needRefresh() ?: true) {
             callback.onDataNotAvailable()
-            return
+        } else {
+            callback.onGroupLoaded(group!!)
         }
+    }
 
-        val group = Gson().fromJson(json, Group::class.java)
-        callback.onGroupLoaded(group)
+    override fun deleteAllGroups() {
+        Realm.getDefaultInstance().use {
+            it.executeTransaction {
+                it.where(Group::class.java)
+                        .findAll()
+                        .deleteAllFromRealm()
+            }
+        }
+    }
+
+    override fun saveGroup(group: Group) {
+        Realm.getDefaultInstance().use {
+            it.executeTransaction {
+                it.copyToRealmOrUpdate(group)
+            }
+        }
     }
 }

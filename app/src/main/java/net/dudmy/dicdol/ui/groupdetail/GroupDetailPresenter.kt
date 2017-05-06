@@ -3,6 +3,7 @@ package net.dudmy.dicdol.ui.groupdetail
 import net.dudmy.dicdol.data.Album
 import net.dudmy.dicdol.data.Artist
 import net.dudmy.dicdol.data.Group
+import net.dudmy.dicdol.data.source.GroupDataSource
 import net.dudmy.dicdol.data.source.GroupRepository
 
 class GroupDetailPresenter(private var view: GroupDetailContract.View?,
@@ -30,7 +31,7 @@ class GroupDetailPresenter(private var view: GroupDetailContract.View?,
             repository.refreshGroups()
         }
 
-        repository.getGroup(groupId, object : GroupRepository.LoadGroupCallback {
+        repository.getGroup(groupId, object : GroupDataSource.LoadGroupCallback {
             override fun onGroupLoaded(group: Group) {
                 view?.run {
                     showGroup(group)

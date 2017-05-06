@@ -1,6 +1,8 @@
 package net.dudmy.dicdol.data.source
 
 import net.dudmy.dicdol.data.Group
+import net.dudmy.dicdol.data.source.GroupDataSource.LoadGroupCallback
+import net.dudmy.dicdol.data.source.GroupDataSource.LoadGroupsCallback
 import net.dudmy.dicdol.data.source.local.GroupLocalDataSource
 import net.dudmy.dicdol.data.source.remote.GroupRemoteDataSource
 
@@ -54,6 +56,7 @@ object GroupRepository : GroupDataSource {
         remoteDataSource.getGroups(object : LoadGroupsCallback {
             override fun onGroupsLoaded(groups: List<Group>) {
                 refreshCache(groups)
+                refreshLocalDataSource(groups)
                 callback.onGroupsLoaded(ArrayList(cachedGroups!!.values))
             }
 
@@ -72,6 +75,13 @@ object GroupRepository : GroupDataSource {
             cachedGroups!!.put(group.id, group)
         }
         cacheIsDirty = false
+    }
+
+    private fun refreshLocalDataSource(groups: List<Group>) {
+        localDataSource.deleteAllGroups()
+        for (group in groups) {
+            localDataSource.saveGroup(group)
+        }
     }
 
     override fun refreshGroups() {
@@ -99,6 +109,7 @@ object GroupRepository : GroupDataSource {
         remoteDataSource.getGroup(groupId, object : LoadGroupCallback {
             override fun onGroupLoaded(group: Group) {
                 cacheIsDirty = false
+                saveGroup(group)
                 callback.onGroupLoaded(group)
             }
 
@@ -108,17 +119,12 @@ object GroupRepository : GroupDataSource {
         })
     }
 
-    interface LoadGroupsCallback {
-
-        fun onGroupsLoaded(groups: List<Group>)
-
-        fun onDataNotAvailable()
+    override fun deleteAllGroups() {
+        // Not required.
     }
 
-    interface LoadGroupCallback {
-
-        fun onGroupLoaded(group: Group)
-
-        fun onDataNotAvailable()
+    override fun saveGroup(group: Group) {
+        checkNotNull(group)
+        localDataSource.saveGroup(group)
     }
 }

@@ -2,6 +2,7 @@ package net.dudmy.dicdol.ui.group
 
 import android.view.View
 import net.dudmy.dicdol.data.Group
+import net.dudmy.dicdol.data.source.GroupDataSource
 import net.dudmy.dicdol.data.source.GroupRepository
 
 class GroupPresenter(private var view: GroupContract.View?,
@@ -26,7 +27,7 @@ class GroupPresenter(private var view: GroupContract.View?,
             repository.refreshGroups()
         }
 
-        repository.getGroups(object : GroupRepository.LoadGroupsCallback {
+        repository.getGroups(object : GroupDataSource.LoadGroupsCallback {
             override fun onGroupsLoaded(groups: List<Group>) {
                 val groupToShow = when (type) {
                     null -> groups

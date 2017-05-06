@@ -1,11 +1,22 @@
 package net.dudmy.dicdol.data
 
+import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
+import io.realm.annotations.RealmClass
+
 /**
  * Created by yujin on 2017. 4. 26..
  */
 
-data class Album(val id: String = "",
+@RealmClass
+open class Album(
 
-                 val name: String = "",
+        @PrimaryKey open var id: String = "",
 
-                 val image: String = "")
+        open var name: String = "",
+
+        open var image: String = ""
+
+) : RealmObject() {
+
+}
