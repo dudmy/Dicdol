@@ -19,4 +19,5 @@ open class Artist(
 
 ) : RealmObject() {
 
+    fun getImgUrl() = "artist/$id/$image"
 }

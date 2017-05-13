@@ -7,19 +7,19 @@
 	"debut": "2016.08.08",
 	"debutSong": "붐바야",
 	"artists": [{
-		"id": 16,
+		"id": 21,
 		"name": "지수",
 		"image": "profile.jpg"
 	}, {
-		"id": 17,
+		"id": 22,
 		"name": "제니",
-		"image": "rofile.jpg"
+		"image": "profile.jpg"
 	}, {
-		"id": 18,
+		"id": 23,
 		"name": "로제",
 		"image": "profile.jpg"
 	}, {
-		"id": 19,
+		"id": 24,
 		"name": "리사",
 		"image": "profile.jpg"
 	}],

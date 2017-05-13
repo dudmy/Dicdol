@@ -7,44 +7,44 @@
 	"debut": "2014.08.04",
 	"debutSong": "행복 (Happiness)",
 	"artists": [{
-		"id": 21,
+		"id": 25,
 		"name": "웬디",
 		"image": "profile.jpg"
 	}, {
-		"id": 22,
+		"id": 26,
 		"name": "슬기",
 		"image": "profile.jpg"
 	}, {
-		"id": 23,
+		"id": 27,
 		"name": "아이린",
 		"image": "profile.jpg"
 	}, {
-		"id": 24,
+		"id": 28,
 		"name": "조이",
 		"image": "profile.jpg"
 	}, {
-		"id": 25,
+		"id": 29,
 		"name": "예리",
 		"image": "profile.jpg"
 	}],
 	"albums": [{
-		"id": 20,
+		"id": 16,
 		"name": "Ice Cream Cake",
 		"image": "art.jpg"
 	}, {
-		"id": 21,
+		"id": 17,
 		"name": "The Red",
 		"image": "art.jpg"
 	}, {
-		"id": 22,
+		"id": 18,
 		"name": "The Velvet",
 		"image": "art.jpg"
 	}, {
-		"id": 23,
+		"id": 19,
 		"name": "Russian Roulette",
 		"image": "art.jpg"
 	}, {
-		"id": 24,
+		"id": 20,
 		"name": "Rookie",
 		"image": "art.jpg"
 	}]

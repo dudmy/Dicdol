@@ -40,4 +40,6 @@ open class Group(
     }
 
     fun needRefresh(): Boolean = type.isEmpty() or debut.isEmpty()
+
+    fun getImgUrl() = "group/$id/$image"
 }

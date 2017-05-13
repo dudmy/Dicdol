@@ -19,4 +19,6 @@ open class Album(
 
 ) : RealmObject() {
 
+    fun getImgUrl() = "album/$id/$image"
+
 }
