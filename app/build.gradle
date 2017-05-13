@@ -40,7 +40,7 @@ dependencies {
 
     // Etc
     compile 'com.google.code.gson:gson:2.8.0'
-    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.1.1'
+    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.1.2-3'
 
     testCompile 'junit:junit:4.12'
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
