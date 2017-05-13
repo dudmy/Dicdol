@@ -1,0 +1,39 @@
+{
+	"id": 7,
+	"name": "DAY6 (데이식스)",
+	"agency": "JYP 엔터테인먼트",
+	"image": "photo.jpg",
+	"type": "boy",
+	"debut": "2015.09.07",
+	"debutSong": "Congratulations",
+	"artists": [{
+		"id": 32,
+		"name": "Young K",
+		"image": "profile.jpg"
+	}, {
+		"id": 33,
+		"name": "도운",
+		"image": "profile.jpg"
+	}, {
+		"id": 34,
+		"name": "성진",
+		"image": "profile.jpg"
+	}, {
+		"id": 35,
+		"name": "원필",
+		"image": "profile.jpg"
+	}, {
+		"id": 36,
+		"name": "Jae",
+		"image": "profile.jpg"
+	}],
+	"albums": [{
+		"id": 30,
+		"name": "The Day",
+		"image": "art.jpg"
+	}, {
+		"id": 31,
+		"name": "DAYDREAM",
+		"image": "art.jpg"
+	}]
+}

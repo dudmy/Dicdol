@@ -36,13 +36,13 @@ class GroupLocalDataSource : GroupDataSource {
         // groups from all the available data sources.
     }
 
-    override fun getGroup(groupId: String, callback: LoadGroupCallback) {
+    override fun getGroup(id: Int, callback: LoadGroupCallback) {
         var group: Group? = null
 
         Realm.getDefaultInstance().use {
             it.executeTransaction {
                 val result = it.where(Group::class.java)
-                        .equalTo("id", groupId)
+                        .equalTo("id", id)
                         .findFirst()
 
                 group = it.copyFromRealm(result)

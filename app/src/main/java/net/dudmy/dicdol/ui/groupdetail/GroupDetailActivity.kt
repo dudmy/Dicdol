@@ -15,7 +15,7 @@ import net.dudmy.dicdol.util.toast
 
 class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
 
-    private val groupId: String by lazy { intent.getStringExtra("groupId") }
+    private val id: Int by lazy { intent.getIntExtra("id", -1) }
 
     private lateinit var groupDetailPresenter: GroupDetailPresenter
 
@@ -31,7 +31,7 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
                     .setAction("Action", null).show()
         }
 
-        refresh_layout.setOnRefreshListener { groupDetailPresenter.loadGroup(groupId, true) }
+        refresh_layout.setOnRefreshListener { groupDetailPresenter.loadGroup(id, true) }
 
         val artistAdapter = GroupDetailAdapter()
         val albumAdapter = GroupDetailAdapter()
@@ -46,7 +46,7 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
         }
 
         groupDetailPresenter = GroupDetailPresenter(this, artistAdapter, artistAdapter, albumAdapter, albumAdapter)
-        groupDetailPresenter.loadGroup(groupId, false)
+        groupDetailPresenter.loadGroup(id, false)
     }
 
     override fun onDestroy() {

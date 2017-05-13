@@ -86,7 +86,7 @@ class GroupFragment : BaseFragment(), GroupContract.View {
 
     override fun startArtistPage(group: Group) {
         val intent = Intent(activity, GroupDetailActivity::class.java)
-        intent.putExtra("groupId", group.id)
+        intent.putExtra("id", group.id)
         startActivity(intent)
     }
 }

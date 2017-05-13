@@ -19,7 +19,7 @@ object GroupRepository : GroupDataSource {
     /**
      * This variable has package local visibility so it can be accessed from tests.
      */
-    private var cachedGroups: MutableMap<String, Group>? = null
+    private var cachedGroups: MutableMap<Int, Group>? = null
 
     /**
      * Marks the cache as invalid, to force an update the next time data is requested. This variable
@@ -68,7 +68,7 @@ object GroupRepository : GroupDataSource {
 
     private fun refreshCache(groups: List<Group>) {
         if (cachedGroups == null) {
-            cachedGroups = LinkedHashMap<String, Group>()
+            cachedGroups = LinkedHashMap<Int, Group>()
         }
         cachedGroups!!.clear()
         for (group in groups) {
@@ -88,25 +88,25 @@ object GroupRepository : GroupDataSource {
         cacheIsDirty = true
     }
 
-    override fun getGroup(groupId: String, callback: LoadGroupCallback) {
+    override fun getGroup(id: Int, callback: LoadGroupCallback) {
         if (cacheIsDirty) {
-             getGroupFromRemoteDataSource(groupId, callback)
+             getGroupFromRemoteDataSource(id, callback)
         } else {
-            localDataSource.getGroup(groupId, object : LoadGroupCallback {
+            localDataSource.getGroup(id, object : LoadGroupCallback {
                 override fun onGroupLoaded(group: Group) {
                     cacheIsDirty = false
                     callback.onGroupLoaded(group)
                 }
 
                 override fun onDataNotAvailable() {
-                    getGroupFromRemoteDataSource(groupId, callback)
+                    getGroupFromRemoteDataSource(id, callback)
                 }
             })
         }
     }
 
-    private fun getGroupFromRemoteDataSource(groupId: String, callback: LoadGroupCallback) {
-        remoteDataSource.getGroup(groupId, object : LoadGroupCallback {
+    private fun getGroupFromRemoteDataSource(id: Int, callback: LoadGroupCallback) {
+        remoteDataSource.getGroup(id, object : LoadGroupCallback {
             override fun onGroupLoaded(group: Group) {
                 cacheIsDirty = false
                 saveGroup(group)

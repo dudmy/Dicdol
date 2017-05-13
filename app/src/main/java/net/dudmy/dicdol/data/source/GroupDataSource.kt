@@ -26,7 +26,7 @@ interface GroupDataSource {
 
     fun refreshGroups()
 
-    fun getGroup(groupId: String, callback: LoadGroupCallback)
+    fun getGroup(id: Int, callback: LoadGroupCallback)
 
     fun deleteAllGroups()
 

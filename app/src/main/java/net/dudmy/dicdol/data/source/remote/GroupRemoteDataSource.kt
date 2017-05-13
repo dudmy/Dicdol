@@ -41,10 +41,10 @@ class GroupRemoteDataSource : GroupDataSource {
         // groups from all the available data sources.
     }
 
-    override fun getGroup(groupId: String, callback: LoadGroupCallback) {
+    override fun getGroup(id: Int, callback: LoadGroupCallback) {
 
         val groupService = GroupService.retrofit.create(GroupService::class.java)
-        val call = groupService.getGroup(groupId)
+        val call = groupService.getGroup(id)
 
         call.enqueue(object : Callback<Group> {
             override fun onResponse(call: Call<Group>?, response: Response<Group>) {

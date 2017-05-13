@@ -11,7 +11,7 @@ import io.realm.annotations.RealmClass
 @RealmClass
 open class Album(
 
-        @PrimaryKey open var id: String = "",
+        @PrimaryKey open var id: Int = 0,
 
         open var name: String = "",
 

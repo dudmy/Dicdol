@@ -22,9 +22,9 @@ interface GroupService {
                     .build()
     }
 
-    @GET("group.json")
+    @GET("group/groups.json")
     fun getGroupList(): Call<List<Group>>
 
-    @GET("{id}/group.json")
-    fun getGroup(@Path("id") groupId: String): Call<Group>
+    @GET("group/{id}/info.json")
+    fun getGroup(@Path("id") id: Int): Call<Group>
 }

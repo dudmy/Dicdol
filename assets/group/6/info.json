@@ -1,0 +1,55 @@
+{
+	"id": 6,
+	"name": "빅스",
+	"agency": "젤리피쉬 엔터테인먼트",
+	"image": "photo.jpg",
+	"type": "boy",
+	"debut": "2012.05.24",
+	"debutSong": "SUPER HERO",
+	"artists": [{
+		"id": 26,
+		"name": "라비",
+		"image": "profile.jpg"
+	}, {
+		"id": 27,
+		"name": "켄",
+		"image": "profile.jpg"
+	}, {
+		"id": 28,
+		"name": "레오",
+		"image": "profile.jpg"
+	}, {
+		"id": 29,
+		"name": "홍빈",
+		"image": "profile.jpg"
+	}, {
+		"id": 30,
+		"name": "엔",
+		"image": "profile.jpg"
+	}, {
+		"id": 31,
+		"name": "혁",
+		"image": "profile.jpg"
+	}],
+	"albums": [{
+		"id": 25,
+		"name": "hyde",
+		"image": "art.jpg"
+	}, {
+		"id": 26,
+		"name": "Voodoo",
+		"image": "art.jpg"
+	}, {
+		"id": 27,
+		"name": "Errpr",
+		"image": "art.jpg"
+	}, {
+		"id": 28,
+		"name": "Chained Up",
+		"image": "art.jpg"
+	}, {
+		"id": 29,
+		"name": "Kratos",
+		"image": "art.jpg"
+	}]
+}

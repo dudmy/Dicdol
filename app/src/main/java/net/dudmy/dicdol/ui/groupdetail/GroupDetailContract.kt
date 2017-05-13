@@ -14,7 +14,7 @@ interface GroupDetailContract {
 
     interface Presenter : BasePresenter {
 
-        fun loadGroup(groupId: String, forceUpdate: Boolean)
+        fun loadGroup(id: Int, forceUpdate: Boolean)
 
         fun onArtistClick(position: Int)
 
