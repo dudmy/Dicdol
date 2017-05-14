@@ -16,7 +16,7 @@ interface GroupContract {
 
         fun onItemClick(position: Int)
 
-        fun sortGroups(selectButton: android.view.View)
+        fun sortGroups(tag: String)
     }
 
     interface View : BaseView {
@@ -27,8 +27,8 @@ interface GroupContract {
 
         fun toastOutOfPosition()
 
-        fun startArtistPage(group: Group)
+        fun startGroupDetailPage(group: Group)
 
-        fun selectCurrentButton(selectButton: android.view.View)
+        fun selectCurrentButton(tag: String)
     }
 }

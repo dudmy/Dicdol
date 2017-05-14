@@ -1,6 +1,5 @@
 package net.dudmy.dicdol.ui.group
 
-import android.view.View
 import net.dudmy.dicdol.data.Group
 import net.dudmy.dicdol.data.source.GroupDataSource
 import net.dudmy.dicdol.data.source.GroupRepository
@@ -59,23 +58,34 @@ class GroupPresenter(private var view: GroupContract.View?,
 
         val group = adapterModel.getItem(position)
 
-        view?.startArtistPage(group)
+        view?.startGroupDetailPage(group)
     }
 
-    override fun sortGroups(selectButton: View) {
+    override fun sortGroups(tag: String) {
 
-        val sortList = adapterModel.getItems()
-                .sortedBy {
-                    when (selectButton.tag) {
-                        "agency" -> it.agency
-                        "name" -> it.name
-                        else -> it.name
-                    }
+        val sortList = if (tag.contains("desc")) {
+            adapterModel.getItems().sortedByDescending {
+                when (tag) {
+                    "name_desc" -> it.name
+                    "agency_desc" -> it.agency
+                    "debut_desc" -> it.debut
+                    else -> it.name
                 }
+            }
+        } else {
+            adapterModel.getItems().sortedBy {
+                when (tag) {
+                    "name" -> it.name
+                    "agency" -> it.agency
+                    "debut" -> it.debut
+                    else -> it.name
+                }
+            }
+        }
 
         adapterModel.addItems(sortList)
         adapterView.refresh()
 
-        view?.selectCurrentButton(selectButton)
+        view?.selectCurrentButton(tag)
     }
 }

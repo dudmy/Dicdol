@@ -5,3 +5,5 @@ package net.dudmy.dicdol.util
  */
 
 val assetsPrefix = "https://raw.githubusercontent.com/dudmy/Dicdol/master/assets/"
+
+val REQUEST_REFRESH = 1

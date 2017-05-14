@@ -86,6 +86,8 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
             isSelected = isAdded
             val message = if (isAdded) R.string.message_favorite_added else R.string.message_favorite_removed
             Snackbar.make(this, getString(message, name), Snackbar.LENGTH_LONG).show()
+
+            setResult(RESULT_OK)
         }
     }
 }

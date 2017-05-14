@@ -41,5 +41,5 @@ open class Group(
         else -> "알수없음"
     }
 
-    fun needRefresh(): Boolean = type.isEmpty() or debut.isEmpty()
+    fun needRefresh(): Boolean = artists?.isEmpty() ?: true
 }

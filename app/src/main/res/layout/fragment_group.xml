@@ -25,6 +25,17 @@
             android:tag="name" />
 
         <Button
+            android:id="@+id/btn_sort_name_desc"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="이름역순"
+            android:textSize="@dimen/text_10"
+            android:textColor="@color/text_selector"
+            android:background="@drawable/btn_circle"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:tag="name_desc" />
+
+        <Button
             android:id="@+id/btn_sort_agency"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -32,7 +43,40 @@
             android:textSize="@dimen/text_10"
             android:textColor="@color/text_selector"
             android:background="@drawable/btn_circle"
+            android:layout_marginBottom="@dimen/margin_8"
             android:tag="agency" />
+
+        <Button
+            android:id="@+id/btn_sort_agency_desc"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="소속사역순"
+            android:textSize="@dimen/text_10"
+            android:textColor="@color/text_selector"
+            android:background="@drawable/btn_circle"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:tag="agency_desc" />
+
+        <Button
+            android:id="@+id/btn_sort_debut"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="데뷔순"
+            android:textSize="@dimen/text_10"
+            android:textColor="@color/text_selector"
+            android:background="@drawable/btn_circle"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:tag="debut" />
+
+        <Button
+            android:id="@+id/btn_sort_debut_desc"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="데뷔역순"
+            android:textSize="@dimen/text_10"
+            android:textColor="@color/text_selector"
+            android:background="@drawable/btn_circle"
+            android:tag="debut_desc" />
     </LinearLayout>
 
     <android.support.v4.widget.SwipeRefreshLayout
