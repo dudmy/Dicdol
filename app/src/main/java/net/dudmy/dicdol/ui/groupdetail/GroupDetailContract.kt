@@ -16,6 +16,8 @@ interface GroupDetailContract {
 
         fun loadGroup(id: Int, forceUpdate: Boolean)
 
+        fun changeFavorite()
+
         fun onArtistClick(position: Int)
 
         fun onAlbumClick(position: Int)
@@ -32,5 +34,7 @@ interface GroupDetailContract {
         fun showArtistPage(artist: Artist)
 
         fun showAlbumPage(album: Album)
+
+        fun toastFavoriteChanged(isAdded: Boolean, name: String)
     }
 }

@@ -50,6 +50,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         } else if (id == R.id.nav_girl) {
             setTitle(R.string.girl)
             showGroupPage("girl")
+        } else if (id == R.id.nav_favorite) {
+            setTitle(R.string.favorite)
+            showGroupPage("favorite")
         } else if (id == R.id.nav_help) {
             startSettingPage("help")
         } else if (id == R.id.nav_setting) {

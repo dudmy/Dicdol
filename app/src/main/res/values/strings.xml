@@ -9,4 +9,8 @@
     <string name="girl">Girl</string>
     <string name="help">Help</string>
     <string name="setting">Setting</string>
+
+    <string name="message_favorite_added">%1$s group has been added to favorites.</string>
+    <string name="message_favorite_removed">%1$s group has been removed from favorites.</string>
+    <string name="favorite">Favorite</string>
 </resources>

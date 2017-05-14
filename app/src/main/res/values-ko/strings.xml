@@ -5,4 +5,8 @@
     <string name="girl">걸</string>
     <string name="help">도움</string>
     <string name="setting">설정</string>
+
+    <string name="message_favorite_added">%1$s 그룹이 즐겨찾기에 추가되었습니다.</string>
+    <string name="message_favorite_removed">%1$s 그룹이 즐겨찾기에서 삭제되었습니다.</string>
+    <string name="favorite">즐겨찾기</string>
 </resources>

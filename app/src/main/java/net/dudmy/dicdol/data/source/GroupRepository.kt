@@ -126,5 +126,11 @@ object GroupRepository : GroupDataSource {
     override fun saveGroup(group: Group) {
         checkNotNull(group)
         localDataSource.saveGroup(group)
+
+        // Do in memory cache update to keep the app UI up to date
+        if (cachedGroups == null) {
+            cachedGroups = LinkedHashMap<Int, Group>()
+        }
+        cachedGroups!!.put(group.id, group)
     }
 }

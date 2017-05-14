@@ -26,10 +26,7 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
 
         enableHomeAsUp()
 
-        fab.setOnClickListener {
-            Snackbar.make(it, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+        fab.setOnClickListener { groupDetailPresenter.changeFavorite() }
 
         refresh_layout.setOnRefreshListener { groupDetailPresenter.loadGroup(id, true) }
 
@@ -63,6 +60,8 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
             tv_type.text = it.getTypeStr()
             tv_debut.text = it.debut
             tv_debut_song.text = it.debutSong
+
+            fab.isSelected = it.favorite
         }
     }
 
@@ -80,5 +79,13 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
 
     override fun showAlbumPage(album: Album) {
         baseContext.toast("click $album")
+    }
+
+    override fun toastFavoriteChanged(isAdded: Boolean, name: String) {
+        fab.run {
+            isSelected = isAdded
+            val message = if (isAdded) R.string.message_favorite_added else R.string.message_favorite_removed
+            Snackbar.make(this, getString(message, name), Snackbar.LENGTH_LONG).show()
+        }
     }
 }

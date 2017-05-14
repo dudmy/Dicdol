@@ -14,6 +14,8 @@ class GroupDetailPresenter(private var view: GroupDetailContract.View?,
 
     private val repository = GroupRepository
 
+    private var group: Group? = null
+
     init {
         artistAdapterView.clickListener = { onArtistClick(it) }
         albumAdapterView.clickListener = { onAlbumClick(it) }
@@ -24,7 +26,6 @@ class GroupDetailPresenter(private var view: GroupDetailContract.View?,
     }
 
     override fun loadGroup(id: Int, forceUpdate: Boolean) {
-
         view!!.setLoadingIndicator(true)
 
         if (forceUpdate) {
@@ -33,6 +34,8 @@ class GroupDetailPresenter(private var view: GroupDetailContract.View?,
 
         repository.getGroup(id, object : GroupDataSource.LoadGroupCallback {
             override fun onGroupLoaded(group: Group) {
+                this@GroupDetailPresenter.group = group
+
                 view?.run {
                     showGroup(group)
 
@@ -53,6 +56,20 @@ class GroupDetailPresenter(private var view: GroupDetailContract.View?,
                 }
             }
         })
+    }
+
+    override fun changeFavorite() {
+        if (group == null) {
+            view?.showLoadingGroupError()
+            return
+        }
+
+        group?.let {
+            it.favorite = !it.favorite
+            repository.saveGroup(it)
+
+            view?.toastFavoriteChanged(it.favorite, it.name)
+        }
     }
 
     override fun onArtistClick(position: Int) {

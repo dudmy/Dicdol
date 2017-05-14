@@ -31,6 +31,7 @@ class GroupPresenter(private var view: GroupContract.View?,
             override fun onGroupsLoaded(groups: List<Group>) {
                 val groupToShow = when (type) {
                     null -> groups
+                    "favorite" -> groups.filter { it.favorite }
                     else -> groups.filter { it.type == type }
                 }
 

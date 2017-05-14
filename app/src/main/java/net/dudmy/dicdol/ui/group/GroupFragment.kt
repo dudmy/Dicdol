@@ -59,6 +59,10 @@ class GroupFragment : BaseFragment(), GroupContract.View {
         buttonList.map { it.setOnClickListener { groupPresenter.sortGroups(it) } }
 
         groupPresenter = GroupPresenter(this, groupAdapter, groupAdapter)
+    }
+
+    override fun onResume() {
+        super.onResume()
         groupPresenter.loadGroups(type, false)
     }
 

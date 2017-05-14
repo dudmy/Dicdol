@@ -28,7 +28,9 @@ open class Group(
 
         open var artists: RealmList<Artist>? = null,
 
-        open var albums: RealmList<Album>? = null
+        open var albums: RealmList<Album>? = null,
+
+        open var favorite: Boolean = false
 
 ) : RealmObject() {
 
