@@ -1,0 +1,63 @@
+{
+	"id": 1,
+	"name": "TWICE (트와이스)",
+	"agency": "JYP 엔터테인먼트",
+	"image": "http://image.bugsm.co.kr/artist/images/1000/802499/80249916.jpg",
+	"type": "girl",
+	"debut": "2015.10.20",
+	"debutSong": "OOH-AHH하게",
+	"artists": [{
+		"id": 1,
+		"name": "나연",
+		"image": "http://image.bugsm.co.kr/artist/images/500/802505/80250504.jpg"
+	}, {
+		"id": 2,
+		"name": "정연",
+		"image": "http://image.bugsm.co.kr/artist/images/500/802505/80250505.jpg"
+	}, {
+		"id": 3,
+		"name": "모모",
+		"image": "http://image.bugsm.co.kr/artist/images/500/802505/80250506.jpg"
+	}, {
+		"id": 4,
+		"name": "사나",
+		"image": "http://image.bugsm.co.kr/artist/images/500/802505/80250507.jpg"
+	}, {
+		"id": 5,
+		"name": "지효",
+		"image": "http://image.bugsm.co.kr/artist/images/500/802504/80250496.jpg"
+	}, {
+		"id": 6,
+		"name": "미나",
+		"image": "http://image.bugsm.co.kr/artist/images/500/802505/80250508.jpg"
+	}, {
+		"id": 7,
+		"name": "다현",
+		"image": "http://image.bugsm.co.kr/artist/images/500/802505/80250509.jpg"
+	}, {
+		"id": 8,
+		"name": "채영",
+		"image": "http://image.bugsm.co.kr/artist/images/500/802505/80250510.jpg"
+	}, {
+		"id": 9,
+		"name": "쯔위",
+		"image": "http://image.bugsm.co.kr/artist/images/500/802505/80250511.jpg"
+	}],
+	"albums": [{
+		"id": 1,
+		"name": "THE STORY BEGINS",
+		"image": "http://image.bugsm.co.kr/album/images/500/200037/20003708.jpg"
+	}, {
+		"id": 2,
+		"name": "PAGE TWO",
+		"image": "http://image.bugsm.co.kr/album/images/500/200324/20032455.jpg"
+	}, {
+		"id": 3,
+		"name": "TWICEcoaster : LANE 1",
+		"image": "http://image.bugsm.co.kr/album/images/500/200625/20062529.jpg"
+	}, {
+		"id": 4,
+		"name": "TWICEcoaster : LANE 2",
+		"image": "http://image.bugsm.co.kr/album/images/500/200828/20082818.jpg"
+	}]
+}

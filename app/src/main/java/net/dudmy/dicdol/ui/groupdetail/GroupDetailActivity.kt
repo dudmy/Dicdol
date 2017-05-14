@@ -54,7 +54,7 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
     override fun showGroup(group: Group) {
         group.let {
             title = it.name
-            iv_group.loadImage(it.getImgUrl())
+            iv_group.loadImage(it.image)
 
             tv_agency.text = it.agency
             tv_type.text = it.getTypeStr()

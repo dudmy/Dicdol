@@ -15,25 +15,22 @@ import java.io.IOException
  */
 
 fun ImageView.loadImage(url: String) {
-
     Glide.with(context)
-            .load(assetsPrefix + url)
+            .load(url)
             .centerCrop()
             .placeholder(R.drawable.sample_group)
             .into(this)
 }
 
 fun ImageView.loadRoundImage(url: String) {
-
     Glide.with(context)
-            .load(assetsPrefix + url)
+            .load(url)
             .bitmapTransform(CropCircleTransformation(context))
             .placeholder(R.drawable.sample_group)
             .into(this)
 }
 
 fun Context.toast(message: Any) {
-
     when (message) {
         is Int -> Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         is String -> Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

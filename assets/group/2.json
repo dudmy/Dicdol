@@ -1,0 +1,59 @@
+{
+	"id": 2,
+	"name": "방탄소년단",
+	"agency": "빅히트 엔터테인먼트",
+	"image": "http://image.bugsm.co.kr/artist/images/1000/800793/80079394.jpg",
+	"type": "boy",
+	"debut": "2013.06.12",
+	"debutSong": "No More Dream",
+	"artists": [{
+		"id": 10,
+		"name": "랩몬스터",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180881.jpg"
+	}, {
+		"id": 11,
+		"name": "슈가",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180882.jpg"
+	}, {
+		"id": 12,
+		"name": "진",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180883.jpg"
+	}, {
+		"id": 13,
+		"name": "제이홉",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180886"
+	}, {
+		"id": 14,
+		"name": "지민",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180887.jpg"
+	}, {
+		"id": 15,
+		"name": "뷔",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180888.jpg"
+	}, {
+		"id": 16,
+		"name": "정국",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180889.jpg"
+	}],
+	"albums": [{
+		"id": 5,
+		"name": "Skool Luv Affair Special Addition",
+		"image": "http://image.bugsm.co.kr/album/images/500/4298/429821.jpg"
+	}, {
+		"id": 6,
+		"name": "DARK&WILD",
+		"image": "http://image.bugsm.co.kr/album/images/500/4464/446437.jpg"
+	}, {
+		"id": 7,
+		"name": "화양연화 Young Forever",
+		"image": "http://image.bugsm.co.kr/album/images/500/5577/557771.jpg"
+	}, {
+		"id": 8,
+		"name": "WINGS",
+		"image": "http://image.bugsm.co.kr/album/images/500/200599/20059928.jpg"
+	}, {
+		"id": 9,
+		"name": "YOU NEVER WALK ALONE",
+		"image": "http://image.bugsm.co.kr/album/images/500/200816/20081605.jpg"
+	}]
+}

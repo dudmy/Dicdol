@@ -1,0 +1,51 @@
+{
+	"id": 6,
+	"name": "빅스 (VIXX)",
+	"agency": "젤리피쉬 엔터테인먼트",
+	"image": "http://image.bugsm.co.kr/artist/images/1000/801270/80127088.jpg",
+	"type": "boy",
+	"debut": "2012.05.24",
+	"debutSong": "SUPER HERO",
+	"artists": [{
+		"id": 30,
+		"name": "라비",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801278/80127898.jpg"
+	}, {
+		"id": 31,
+		"name": "켄",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801279/80127900.jpg"
+	}, {
+		"id": 32,
+		"name": "레오",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801279/80127901.jpg"
+	}, {
+		"id": 33,
+		"name": "홍빈",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801279/80127903.jpg"
+	}, {
+		"id": 34,
+		"name": "엔",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801279/80127905.jpg"
+	}, {
+		"id": 35,
+		"name": "혁",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801279/80127907.jpg"
+	}],
+	"albums": [{
+		"id": 20,
+		"name": "Voodoo",
+		"image": "http://image.bugsm.co.kr/album/images/500/3985/398577.jpg"
+	}, {
+		"id": 21,
+		"name": "Error",
+		"image": "http://image.bugsm.co.kr/album/images/500/4566/456676.jpg"
+	}, {
+		"id": 22,
+		"name": "Chained Up",
+		"image": "http://image.bugsm.co.kr/album/images/500/200070/20007055.jpg"
+	}, {
+		"id": 23,
+		"name": "Kratos",
+		"image": "http://image.bugsm.co.kr/album/images/500/200636/20063659.jpg"
+	}]
+}

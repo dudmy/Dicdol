@@ -1,0 +1,39 @@
+{
+	"id": 3,
+	"name": "WINNER",
+	"agency": "YG 엔터테인먼트",
+	"image": "http://image.bugsm.co.kr/artist/images/1000/801948/80194890.jpg",
+	"type": "boy",
+	"debut": "2014.08.12",
+	"debutSong": "공허해",
+	"artists": [{
+		"id": 17,
+		"name": "강승윤",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801948/80194890_015.jpg"
+	}, {
+		"id": 18,
+		"name": "이승훈",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801948/80194890_016.jpg"
+	}, {
+		"id": 19,
+		"name": "MINO",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801948/80194890_014.jpg"
+	}, {
+		"id": 20,
+		"name": "김진우",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801948/80194890_017.jpg"
+	}],
+	"albums": [{
+		"id": 10,
+		"name": "2014 S/S",
+		"image": "http://image.bugsm.co.kr/album/images/500/4450/445050.jpg"
+	}, {
+		"id": 11,
+		"name": "EXIT : E",
+		"image": "http://image.bugsm.co.kr/album/images/500/200166/20016683.jpg"
+	}, {
+		"id": 12,
+		"name": "FATE NUMBER FOR",
+		"image": "http://image.bugsm.co.kr/album/images/500/200907/20090733.jpg"
+	}]
+}

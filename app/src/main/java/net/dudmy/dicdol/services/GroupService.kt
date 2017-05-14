@@ -25,6 +25,6 @@ interface GroupService {
     @GET("group/groups.json")
     fun getGroupList(): Call<List<Group>>
 
-    @GET("group/{id}/info.json")
+    @GET("group/{id}.json")
     fun getGroup(@Path("id") id: Int): Call<Group>
 }

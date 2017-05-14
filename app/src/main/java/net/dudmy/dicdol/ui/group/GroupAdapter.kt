@@ -31,7 +31,7 @@ class GroupAdapter : RecyclerView.Adapter<GroupAdapter.ViewHolder>(), GroupAdapt
             holder.tvName.text = it.name
             holder.tvAgency.text = it.agency
             holder.tvType.text = it.getTypeStr()
-            holder.ivGroup.loadImage(it.getImgUrl())
+            holder.ivGroup.loadImage(it.image)
         }
     }
 

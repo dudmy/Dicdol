@@ -1,0 +1,35 @@
+{
+	"id": 4,
+	"name": "BLACKPINK",
+	"agency": "YG 엔터테인먼트",
+	"image": "http://image.bugsm.co.kr/artist/images/1000/200224/20022492.jpg",
+	"type": "girl",
+	"debut": "2016.08.08",
+	"debutSong": "붐바야",
+	"artists": [{
+		"id": 21,
+		"name": "지수",
+		"image": "http://image.bugsm.co.kr/artist/images/500/200224/20022492_004.jpg"
+	}, {
+		"id": 22,
+		"name": "제니",
+		"image": "http://image.bugsm.co.kr/artist/images/500/200224/20022492_003.jpg"
+	}, {
+		"id": 23,
+		"name": "로제",
+		"image": "http://image.bugsm.co.kr/artist/images/500/200224/20022492_001.jpg"
+	}, {
+		"id": 24,
+		"name": "리사",
+		"image": "http://image.bugsm.co.kr/artist/images/500/200224/20022492_002.jpg"
+	}],
+	"albums": [{
+		"id": 13,
+		"name": "SQUARE ONE",
+		"image": "http://image.bugsm.co.kr/album/images/500/200494/20049444.jpg"
+	}, {
+		"id": 14,
+		"name": "SQUARE TWO",
+		"image": "http://image.bugsm.co.kr/album/images/500/200639/20063947.jpg"
+	}]
+}

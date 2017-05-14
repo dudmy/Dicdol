@@ -34,11 +34,11 @@ class GroupDetailAdapter : RecyclerView.Adapter<GroupDetailAdapter.ViewHolder>()
 
         when (item) {
             is Artist -> {
-                holder.ivGrid.loadRoundImage(item.getImgUrl())
+                holder.ivGrid.loadRoundImage(item.image)
                 holder.tvGrid.text = item.name
             }
             is Album -> {
-                holder.ivGrid.loadRoundImage(item.getImgUrl())
+                holder.ivGrid.loadRoundImage(item.image)
                 holder.tvGrid.text = item.name
             }
         }

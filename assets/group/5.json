@@ -1,0 +1,51 @@
+{
+	"id": 5,
+	"name": "Red Velvet (레드벨벳)",
+	"agency": "SM 엔터테인먼트",
+	"image": "http://image.bugsm.co.kr/artist/images/1000/801994/80199440.jpg",
+	"type": "girl",
+	"debut": "2014.08.04",
+	"debutSong": "행복 (Happiness)",
+	"artists": [{
+		"id": 25,
+		"name": "웬디",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801994/80199440_038.jpg"
+	}, {
+		"id": 26,
+		"name": "슬기",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801994/80199440_035.jpg"
+	}, {
+		"id": 27,
+		"name": "아이린",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801994/80199440_036.jpg"
+	}, {
+		"id": 28,
+		"name": "조이",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801994/80199440_039.jpg"
+	}, {
+		"id": 29,
+		"name": "예리",
+		"image": "http://image.bugsm.co.kr/artist/images/500/801994/80199440_037.jpg"
+	}],
+	"albums": [{
+		"id": 15,
+		"name": "Ice Cream Cake",
+		"image": "http://image.bugsm.co.kr/album/images/500/4900/490027.jpg"
+	}, {
+		"id": 16,
+		"name": "The Red",
+		"image": "http://image.bugsm.co.kr/album/images/500/5306/530606.jpg"
+	}, {
+		"id": 17,
+		"name": "The Velvet",
+		"image": "http://image.bugsm.co.kr/album/images/500/200261/20026112.jpg"
+	}, {
+		"id": 18,
+		"name": "Russian Roulette",
+		"image": "http://image.bugsm.co.kr/album/images/500/200545/20054544.jpg"
+	}, {
+		"id": 19,
+		"name": "Rookie",
+		"image": "http://image.bugsm.co.kr/album/images/500/200798/20079826.jpg"
+	}]
+}
