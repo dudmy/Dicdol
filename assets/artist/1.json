@@ -1,0 +1,16 @@
+{
+	"id": 1,
+	"groupId": 1,
+	"name": "나연",
+	"gender": "female",
+	"birth": "1995.09.22",
+	"nationality": "대한민국",
+	"agency": "JYP 엔터테인먼트",
+	"debut": "2015.10.20",
+	"images": [
+		"http://image.bugsm.co.kr/artist/images/500/802505/80250504_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/500/802505/80250504_002.jpg",
+		"http://image.bugsm.co.kr/artist/images/500/802505/80250504_004.jpg",
+		"http://image.bugsm.co.kr/artist/images/500/802505/80250504_005.jpg"
+	]
+}
