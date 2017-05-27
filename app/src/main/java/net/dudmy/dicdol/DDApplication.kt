@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import io.realm.Realm
 import io.realm.RealmConfiguration
+import net.dudmy.dicdol.util.PreferenceHelper
 
 /**
  * Created by yujin on 2017. 4. 24..
@@ -21,10 +22,12 @@ class DDApplication : Application() {
 
         context = applicationContext
 
-        Realm.init(this)
+        Realm.init(context)
         Realm.setDefaultConfiguration(
                 RealmConfiguration.Builder()
                         .deleteRealmIfMigrationNeeded()
                         .build())
+
+        PreferenceHelper.PrefDelegate.initialize(context)
     }
 }
