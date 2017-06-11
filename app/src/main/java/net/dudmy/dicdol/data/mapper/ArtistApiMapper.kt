@@ -24,6 +24,8 @@ class ArtistApiMapper {
         to.image = json.get("image").asString
 
         val photoJson = json.get("photo").asJsonArray
-        to.photo = photoJson.toString()
+        if (photoJson.size() > 0) {
+            to.photo = photoJson.toString()
+        }
     }
 }
