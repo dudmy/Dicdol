@@ -1,7 +1,9 @@
 package net.dudmy.dicdol.ui.groupdetail
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.view.View
 import kotlinx.android.synthetic.main.activity_group_detail.*
 import kotlinx.android.synthetic.main.content_group_detail.*
 import net.dudmy.dicdol.BaseActivity
@@ -9,6 +11,7 @@ import net.dudmy.dicdol.R
 import net.dudmy.dicdol.data.Album
 import net.dudmy.dicdol.data.Artist
 import net.dudmy.dicdol.data.Group
+import net.dudmy.dicdol.ui.artist.ArtistActivity
 import net.dudmy.dicdol.ui.views.GridOffsetDecoration
 import net.dudmy.dicdol.util.loadImage
 import net.dudmy.dicdol.util.toast
@@ -28,8 +31,6 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
 
         fab.setOnClickListener { groupDetailPresenter.changeFavorite() }
 
-        refresh_layout.setOnRefreshListener { groupDetailPresenter.loadGroup(id, true) }
-
         val artistAdapter = GroupDetailAdapter()
         val albumAdapter = GroupDetailAdapter()
 
@@ -43,7 +44,7 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
         }
 
         groupDetailPresenter = GroupDetailPresenter(this, artistAdapter, artistAdapter, albumAdapter, albumAdapter)
-        groupDetailPresenter.loadGroup(id, false)
+        groupDetailPresenter.loadGroup(id)
     }
 
     override fun onDestroy() {
@@ -66,7 +67,7 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
     }
 
     override fun setLoadingIndicator(active: Boolean) {
-        refresh_layout.isRefreshing = active
+        progress_bar.visibility = if (active) View.VISIBLE else View.GONE
     }
 
     override fun showLoadingGroupError() {
@@ -74,7 +75,9 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
     }
 
     override fun showArtistPage(artist: Artist) {
-        baseContext.toast("click $artist")
+        startActivity(Intent(this, ArtistActivity::class.java).apply {
+            putExtra("id", artist.id)
+        })
     }
 
     override fun showAlbumPage(album: Album) {

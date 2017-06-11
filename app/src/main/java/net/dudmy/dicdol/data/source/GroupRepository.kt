@@ -89,26 +89,20 @@ object GroupRepository : GroupDataSource {
     }
 
     override fun getGroup(id: Int, callback: LoadGroupCallback) {
-        if (cacheIsDirty) {
-             getGroupFromRemoteDataSource(id, callback)
-        } else {
-            localDataSource.getGroup(id, object : LoadGroupCallback {
-                override fun onGroupLoaded(group: Group) {
-                    cacheIsDirty = false
-                    callback.onGroupLoaded(group)
-                }
+        localDataSource.getGroup(id, object : LoadGroupCallback {
+            override fun onGroupLoaded(group: Group) {
+                callback.onGroupLoaded(group)
+            }
 
-                override fun onDataNotAvailable() {
-                    getGroupFromRemoteDataSource(id, callback)
-                }
-            })
-        }
+            override fun onDataNotAvailable() {
+                getGroupFromRemoteDataSource(id, callback)
+            }
+        })
     }
 
     private fun getGroupFromRemoteDataSource(id: Int, callback: LoadGroupCallback) {
         remoteDataSource.getGroup(id, object : LoadGroupCallback {
             override fun onGroupLoaded(group: Group) {
-                cacheIsDirty = false
                 saveGroup(group)
                 callback.onGroupLoaded(group)
             }

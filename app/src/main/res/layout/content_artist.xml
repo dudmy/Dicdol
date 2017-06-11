@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.artist.ArtistActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewpager_height" />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/indicator_height"
+        android:layout_alignBottom="@id/view_pager" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view_pager">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_24"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="이름"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_36"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/tv_name_label"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Artist name (fullname)" />
+
+            <TextView
+                android:id="@+id/tv_gender_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="성별"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_label"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_name_label"  />
+
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_name"
+                tools:text="Artist gender" />
+
+            <TextView
+                android:id="@+id/tv_birth_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="생일"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gender_label"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_gender_label" />
+
+            <TextView
+                android:id="@+id/tv_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gender"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_gender"
+                tools:text="Artist birth" />
+
+            <TextView
+                android:id="@+id/tv_nationality_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="국적"
+                app:layout_constraintTop_toBottomOf="@+id/tv_birth_label"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_birth_label" />
+
+            <TextView
+                android:id="@+id/tv_nationality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_birth"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_birth"
+                tools:text="Artist nationality" />
+
+            <TextView
+                android:id="@+id/tv_agency_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="소속사"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nationality_label"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_nationality_label" />
+
+            <TextView
+                android:id="@+id/tv_agency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nationality"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_nationality"
+                tools:text="Artist agency" />
+
+            <TextView
+                android:id="@+id/tv_debut_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="데뷔"
+                app:layout_constraintTop_toBottomOf="@+id/tv_agency_label"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_agency_label" />
+
+            <TextView
+                android:id="@+id/tv_debut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:padding="@dimen/margin_4"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_agency"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_agency"
+                tools:text="Artist debut" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

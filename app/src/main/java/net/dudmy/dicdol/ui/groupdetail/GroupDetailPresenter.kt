@@ -25,12 +25,8 @@ class GroupDetailPresenter(private var view: GroupDetailContract.View?,
         this.view = null
     }
 
-    override fun loadGroup(id: Int, forceUpdate: Boolean) {
+    override fun loadGroup(id: Int) {
         view!!.setLoadingIndicator(true)
-
-        if (forceUpdate) {
-            repository.refreshGroups()
-        }
 
         repository.getGroup(id, object : GroupDataSource.LoadGroupCallback {
             override fun onGroupLoaded(group: Group) {

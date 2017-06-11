@@ -20,4 +20,9 @@
     <!-- Height -->
     <dimen name="border_height">0.3dp</dimen>
     <dimen name="app_bar_height">300dp</dimen>
+    <dimen name="indicator_height">48dp</dimen>
+    <dimen name="viewpager_height">350dp</dimen>
+
+    <!-- Size -->
+    <dimen name="progress_size">50dp</dimen>
 </resources>
