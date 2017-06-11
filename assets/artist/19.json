@@ -1,0 +1,16 @@
+{
+	"id": 19,
+	"groupId": 3,
+	"name": "MINO",
+	"fullname": "송민호",
+	"gender": "male",
+	"birth": "1993.03.30",
+	"nationality": "대한민국",
+	"agency": "YG 엔터테인먼트",
+	"debut": "2014.08.12",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801232/80123275.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801858/80185895_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801858/80185895_003.jpg"
+	]
+}

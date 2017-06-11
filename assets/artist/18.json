@@ -1,0 +1,16 @@
+{
+	"id": 18,
+	"groupId": 3,
+	"name": "이승훈",
+	"fullname": "이승훈",
+	"gender": "male",
+	"birth": "1992.01.11",
+	"nationality": "대한민국",
+	"agency": "YG 엔터테인먼트",
+	"debut": "2014.08.12",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801232/80123275.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801232/80123275_002.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801232/80123275_004.jpg"
+	]
+}

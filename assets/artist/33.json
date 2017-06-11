@@ -1,0 +1,18 @@
+{
+	"id": 33,
+	"groupId": 6,
+	"name": "홍빈",
+	"fullname": "이홍빈",
+	"gender": "male",
+	"birth": "1993.09.29",
+	"nationality": "대한민국",
+	"agency": "젤리피쉬 엔터테인먼트",
+	"debut": "2012.05.24",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801279/80127903.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127903_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127903_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127903_012.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127903_016.jpg"
+	]
+}

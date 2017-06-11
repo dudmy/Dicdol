@@ -1,0 +1,18 @@
+{
+	"id": 35,
+	"groupId": 6,
+	"name": "혁",
+	"fullname": "한상혁",
+	"gender": "male",
+	"birth": "1995.07.05",
+	"nationality": "대한민국",
+	"agency": "젤리피쉬 엔터테인먼트",
+	"debut": "2012.05.24",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801279/80127907.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127907_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127907_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127907_013.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127907_017.jpg"
+	]
+}

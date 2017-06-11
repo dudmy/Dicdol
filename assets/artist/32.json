@@ -1,0 +1,18 @@
+{
+	"id": 32,
+	"groupId": 6,
+	"name": "레오",
+	"fullname": "정택운",
+	"gender": "male",
+	"birth": "1990.11.10",
+	"nationality": "대한민국",
+	"agency": "젤리피쉬 엔터테인먼트",
+	"debut": "2012.05.24",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801279/80127901.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127901_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127901_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127901_013.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127901_017.jpg"
+	]
+}

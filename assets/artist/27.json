@@ -1,0 +1,18 @@
+{
+	"id": 27,
+	"groupId": 5,
+	"name": "아이린",
+	"fullname": "배주현",
+	"gender": "female",
+	"birth": "1991.03.29",
+	"nationality": "대한민국",
+	"agency": "SM 엔터테인먼트",
+	"debut": "2014.08.04",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801994/80199442.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801994/80199442_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801994/80199442_004.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801994/80199442_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801994/80199442_007.jpg"
+	]
+}

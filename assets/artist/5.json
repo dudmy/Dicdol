@@ -1,0 +1,18 @@
+{
+	"id": 5,
+	"groupId": 1,
+	"name": "지효",
+	"fullname": "박지효",
+	"gender": "female",
+	"birth": "1997.02.01",
+	"nationality": "대한민국",
+	"agency": "JYP 엔터테인먼트",
+	"debut": "2015.10.20",
+	"image": "http://image.bugsm.co.kr/artist/images/500/802504/80250496.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/802504/80250496_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802504/80250496_002.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802504/80250496_004.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802504/80250496_005.jpg"
+	]
+}

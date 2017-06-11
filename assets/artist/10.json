@@ -1,0 +1,18 @@
+{
+	"id": 10,
+	"groupId": 2,
+	"name": "랩몬스터",
+	"fullname": "김남준",
+	"gender": "male",
+	"birth": "1994.09.12",
+	"nationality": "대한민국",
+	"agency": "빅히트 엔터테인먼트",
+	"debut": "2013.06.12",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180881.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180881_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180881_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180881_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180881_006.jpg"
+	]
+}

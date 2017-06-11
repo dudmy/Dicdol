@@ -1,0 +1,18 @@
+{
+	"id": 3,
+	"groupId": 1,
+	"name": "모모",
+	"fullname": "히라이 모모",
+	"gender": "female",
+	"birth": "1996.11.09",
+	"nationality": "대한민국",
+	"agency": "JYP 엔터테인먼트",
+	"debut": "2015.10.20",
+	"image": "http://image.bugsm.co.kr/artist/images/500/802505/80250506.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/802505/80250506_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802505/80250506_002.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802505/80250506_004.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802505/80250506_005.jpg"
+	]
+}

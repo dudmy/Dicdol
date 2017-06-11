@@ -1,0 +1,18 @@
+{
+	"id": 15,
+	"groupId": 2,
+	"name": "뷔",
+	"fullname": "김태형",
+	"gender": "male",
+	"birth": "1995.12.30",
+	"nationality": "대한민국",
+	"agency": "빅히트 엔터테인먼트",
+	"debut": "2013.06.12",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180888.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180888_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180888_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180888_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180888_006.jpg"
+	]
+}

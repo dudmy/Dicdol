@@ -1,0 +1,18 @@
+{
+	"id": 8,
+	"groupId": 1,
+	"name": "채영",
+	"fullname": "손채영",
+	"gender": "female",
+	"birth": "1999.04.23",
+	"nationality": "대한민국",
+	"agency": "JYP 엔터테인먼트",
+	"debut": "2015.10.20",
+	"image": "http://image.bugsm.co.kr/artist/images/500/802504/80250510.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/802504/80250510_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802504/80250510_002.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802504/80250510_004.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802504/80250510_005.jpg"
+	]
+}

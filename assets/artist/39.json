@@ -1,0 +1,17 @@
+{
+	"id": 39,
+	"groupId": 7,
+	"name": "원필",
+	"fullname": "김원필",
+	"gender": "male",
+	"birth": "1994.04.28",
+	"nationality": "대한민국",
+	"agency": "JYP 엔터테인먼트",
+	"debut": "2015.09.07",
+	"image": "http://image.bugsm.co.kr/artist/images/500/802463/80246395.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246395_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246395_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246395_004.jpg"
+	]
+}

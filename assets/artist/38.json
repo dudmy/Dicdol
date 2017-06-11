@@ -1,0 +1,17 @@
+{
+	"id": 38,
+	"groupId": 7,
+	"name": "성진",
+	"fullname": "박성진",
+	"gender": "male",
+	"birth": "1993.01.16",
+	"nationality": "대한민국",
+	"agency": "JYP 엔터테인먼트",
+	"debut": "2015.09.07",
+	"image": "http://image.bugsm.co.kr/artist/images/500/802463/80246394.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246394_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246394_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246394_004.jpg"
+	]
+}

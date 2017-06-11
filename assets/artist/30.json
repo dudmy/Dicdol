@@ -1,0 +1,18 @@
+{
+	"id": 30,
+	"groupId": 6,
+	"name": "라비",
+	"fullname": "김원식",
+	"gender": "male",
+	"birth": "1993.02.15",
+	"nationality": "대한민국",
+	"agency": "젤리피쉬 엔터테인먼트",
+	"debut": "2012.05.24",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801278/80127898.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801278/80127898_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801278/80127898_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801278/80127898_013.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801278/80127898_024.jpg"
+	]
+}

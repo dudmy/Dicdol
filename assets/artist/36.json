@@ -1,0 +1,17 @@
+{
+	"id": 36,
+	"groupId": 7,
+	"name": "Young K",
+	"fullname": "강영현",
+	"gender": "male",
+	"birth": "1993.12.19",
+	"nationality": "대한민국",
+	"agency": "JYP 엔터테인먼트",
+	"debut": "2015.09.07",
+	"image": "http://image.bugsm.co.kr/artist/images/500/802463/80246375.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246375_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246375_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246375_004.jpg"
+	]
+}

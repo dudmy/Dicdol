@@ -1,0 +1,17 @@
+{
+	"id": 40,
+	"groupId": 7,
+	"name": "Jae",
+	"fullname": "박제형",
+	"gender": "male",
+	"birth": "1992.09.15",
+	"nationality": "미국",
+	"agency": "JYP 엔터테인먼트",
+	"debut": "2015.09.07",
+	"image": "http://image.bugsm.co.kr/artist/images/500/802463/80246398.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246398_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246398_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802463/80246398_004.jpg"
+	]
+}

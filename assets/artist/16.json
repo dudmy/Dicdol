@@ -1,0 +1,18 @@
+{
+	"id": 16,
+	"groupId": 2,
+	"name": "정국",
+	"fullname": "전정국",
+	"gender": "male",
+	"birth": "1997.09.01",
+	"nationality": "대한민국",
+	"agency": "빅히트 엔터테인먼트",
+	"debut": "2013.06.12",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180889.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180889_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180889_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180889_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180889_006.jpg"
+	]
+}

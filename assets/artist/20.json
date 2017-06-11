@@ -1,0 +1,16 @@
+{
+	"id": 20,
+	"groupId": 3,
+	"name": "김진우",
+	"fullname": "김진우",
+	"gender": "male",
+	"birth": "1991.09.26",
+	"nationality": "대한민국",
+	"agency": "YG 엔터테인먼트",
+	"debut": "2014.08.12",
+	"image": "http://image.bugsm.co.kr/artist/images/500/802009/80200906.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/802009/80200906_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802009/80200906_003.jpg"
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"id": 31,
+	"groupId": 6,
+	"name": "켄",
+	"fullname": "이재환",
+	"gender": "male",
+	"birth": "1992.04.06",
+	"nationality": "대한민국",
+	"agency": "젤리피쉬 엔터테인먼트",
+	"debut": "2012.05.24",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801279/80127900.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127900_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127900_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127900_012.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801279/80127900_016.jpg"
+	]
+}

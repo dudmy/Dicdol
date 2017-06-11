@@ -1,0 +1,16 @@
+{
+	"id": 17,
+	"groupId": 3,
+	"name": "강승윤",
+	"fullname": "강승윤",
+	"gender": "male",
+	"birth": "1994.01.21",
+	"nationality": "대한민국",
+	"agency": "YG 엔터테인먼트",
+	"debut": "2014.08.12",
+	"image": "http://image.bugsm.co.kr/artist/images/500/800795/80079589.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/800795/80079589_004.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/800795/80079589_006.jpg"
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"id": 29,
+	"groupId": 5,
+	"name": "예리",
+	"fullname": "김예림",
+	"gender": "female",
+	"birth": "1999.03.05",
+	"nationality": "대한민국",
+	"agency": "SM 엔터테인먼트",
+	"debut": "2014.08.04",
+	"image": "http://image.bugsm.co.kr/artist/images/500/802235/80223592.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/802235/80223592_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802235/80223592_002.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802235/80223592_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802235/80223592_005.jpg"
+	]
+}

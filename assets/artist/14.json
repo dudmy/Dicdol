@@ -1,0 +1,18 @@
+{
+	"id": 14,
+	"groupId": 2,
+	"name": "지민",
+	"fullname": "박지민",
+	"gender": "male",
+	"birth": "1995.10.13",
+	"nationality": "대한민국",
+	"agency": "빅히트 엔터테인먼트",
+	"debut": "2013.06.12",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180887.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180887_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180887_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180887_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180887_006.jpg"
+	]
+}

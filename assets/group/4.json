@@ -9,19 +9,19 @@
 	"artists": [{
 		"id": 21,
 		"name": "지수",
-		"image": "http://image.bugsm.co.kr/artist/images/500/200224/20022492_004.jpg"
+		"image": "http://image.bugsm.co.kr/artist/images/500/802656/80265677.jpg"
 	}, {
 		"id": 22,
 		"name": "제니",
-		"image": "http://image.bugsm.co.kr/artist/images/500/200224/20022492_003.jpg"
+		"image": "http://image.bugsm.co.kr/artist/images/500/802656/80265678.jpg"
 	}, {
 		"id": 23,
 		"name": "로제",
-		"image": "http://image.bugsm.co.kr/artist/images/500/200224/20022492_001.jpg"
+		"image": "http://image.bugsm.co.kr/artist/images/500/802656/80265679.jpg"
 	}, {
 		"id": 24,
 		"name": "리사",
-		"image": "http://image.bugsm.co.kr/artist/images/500/200224/20022492_002.jpg"
+		"image": "http://image.bugsm.co.kr/artist/images/500/802656/80265680.jpg"
 	}],
 	"albums": [{
 		"id": 13,

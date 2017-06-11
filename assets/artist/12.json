@@ -1,0 +1,18 @@
+{
+	"id": 12,
+	"groupId": 2,
+	"name": "진",
+	"fullname": "김석진",
+	"gender": "male",
+	"birth": "1992.12.04",
+	"nationality": "대한민국",
+	"agency": "빅히트 엔터테인먼트",
+	"debut": "2013.06.12",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801808/80180883.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180883_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180883_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180883_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801808/80180883_006.jpg"
+	]
+}

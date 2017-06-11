@@ -1,0 +1,18 @@
+{
+	"id": 26,
+	"groupId": 5,
+	"name": "슬기",
+	"fullname": "김슬기",
+	"gender": "female",
+	"birth": "1994.02.10",
+	"nationality": "대한민국",
+	"agency": "SM 엔터테인먼트",
+	"debut": "2014.08.04",
+	"image": "http://image.bugsm.co.kr/artist/images/500/801978/80197847.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/801978/80197847_003.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801978/80197847_004.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801978/80197847_005.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/801978/80197847_007.jpg"
+	]
+}

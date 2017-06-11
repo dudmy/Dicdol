@@ -1,0 +1,18 @@
+{
+	"id": 4,
+	"groupId": 1,
+	"name": "사나",
+	"fullname": "미나토자키 사나",
+	"gender": "female",
+	"birth": "1996.12.29",
+	"nationality": "대한민국",
+	"agency": "JYP 엔터테인먼트",
+	"debut": "2015.10.20",
+	"image": "http://image.bugsm.co.kr/artist/images/500/802505/80250507.jpg",
+	"photo": [
+		"http://image.bugsm.co.kr/artist/images/1000/802505/80250507_001.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802505/80250507_002.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802505/80250507_004.jpg",
+		"http://image.bugsm.co.kr/artist/images/1000/802505/80250507_005.jpg"
+	]
+}
