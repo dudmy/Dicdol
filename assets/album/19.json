@@ -1,0 +1,18 @@
+{
+	"id": 19,
+	"groupId": 5,
+	"name": "Rookie",
+	"day": "2017.02.01",
+	"publishing": "지니뮤직",
+	"agency": "SM 엔터테인먼트",
+	"genre": "R&B / Soul, Ballad, Dance",
+	"image": "http://image.bugsm.co.kr/album/images/1000/200798/20079826.jpg",
+	"songs": [
+		"Rookie",
+		"Little Little",
+		"Happily Ever After",
+		"Talk To Me",
+		"Body Talk",
+		"마지막 사랑 (Last Love)"
+	]
+}

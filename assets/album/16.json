@@ -1,0 +1,22 @@
+{
+	"id": 16,
+	"groupId": 5,
+	"name": "The Red",
+	"day": "2015.09.09",
+	"publishing": "지니뮤직",
+	"agency": "SM 엔터테인먼트",
+	"genre": "Dance",
+	"image": "http://image.bugsm.co.kr/album/images/1000/5306/530606.jpg",
+	"songs": [
+		"Dumb Dumb",
+		"Huff n Puff",
+		"Campfire",
+		"Red Dress",
+		"Oh Boy",
+		"Lady`s Room",
+		"Time Slip",
+		"Don`t U Wait No More",
+		"Day 1",
+		"Cool World"
+	]
+}

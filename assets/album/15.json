@@ -1,0 +1,18 @@
+{
+	"id": 15,
+	"groupId": 5,
+	"name": "Ice Cream Cake",
+	"day": "2015.03.17",
+	"publishing": "지니뮤직",
+	"agency": "SM 엔터테인먼트",
+	"genre": "Dance, Ballad",
+	"image": "http://image.bugsm.co.kr/album/images/1000/4900/490027.jpg",
+	"songs": [
+		"Ice Cream Cake",
+		"Automatic",
+		"Somethin Kinda Crazy",
+		"Stupid Cupid",
+		"Take It Slow",
+		"사탕 (Candy)"
+	]
+}

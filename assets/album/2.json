@@ -1,0 +1,19 @@
+{
+	"id": 2,
+	"groupId": 1,
+	"name": "PAGE TWO",
+	"day": "2016.04.25",
+	"publishing": "지니뮤직",
+	"agency": "JYP 엔터테인먼트",
+	"genre": "Dance",
+	"image": "http://image.bugsm.co.kr/album/images/1000/200324/20032455.jpg",
+	"songs": [
+		"CHEER UP",
+		"소중한 사랑",
+		"Touchdown",
+		"툭하면 톡",
+		"Woohoo",
+		"Headphone 써",
+		"I'm gonna be a star (CD Only)"
+	]
+}

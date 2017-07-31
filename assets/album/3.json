@@ -1,0 +1,19 @@
+{
+	"id": 3,
+	"groupId": 1,
+	"name": "TWICEcoaster : LANE 1",
+	"day": "2016.10.24",
+	"publishing": "지니뮤직",
+	"agency": "JYP 엔터테인먼트",
+	"genre": "Dance, Ballad",
+	"image": "http://image.bugsm.co.kr/album/images/1000/200625/20062529.jpg",
+	"songs": [
+		"TT",
+		"1 TO 10",
+		"PONYTAIL",
+		"JELLY JELLY",
+		"PIT-A-PAT",
+		"NEXT PAGE",
+		"ONE IN A MILLION"
+	]
+}
