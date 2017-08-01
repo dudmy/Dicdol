@@ -51,6 +51,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.groupdetail.GroupDetailActivity" />
         </activity>
+        <activity android:name=".ui.album.AlbumActivity"
+            android:parentActivityName=".ui.groupdetail.GroupDetailActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.groupdetail.GroupDetailActivity" />
+        </activity>
     </application>
 
 </manifest>
