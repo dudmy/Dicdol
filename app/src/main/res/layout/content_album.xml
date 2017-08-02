@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.album.AlbumActivity">
+
+    <ImageView
+        android:id="@+id/iv_album"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewpager_height"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_album"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_24">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_4"
+                    android:paddingBottom="@dimen/margin_4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="앨범명" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:textSize="14sp"
+                    tools:text="Album name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_4"
+                    android:paddingBottom="@dimen/margin_4"
+                    android:text="발매일"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:textSize="14sp"
+                    tools:text="Album day" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_4"
+                    android:paddingBottom="@dimen/margin_4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="발매사" />
+
+                <TextView
+                    android:id="@+id/tv_publishing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:textSize="14sp"
+                    tools:text="Album publishing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_4"
+                    android:paddingBottom="@dimen/margin_4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="기획사" />
+
+                <TextView
+                    android:id="@+id/tv_agency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:textSize="14sp"
+                    tools:text="Album agency" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_4"
+                    android:paddingBottom="@dimen/margin_4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="장르" />
+
+                <TextView
+                    android:id="@+id/tv_genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    tools:text="Album genre" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <View
+            android:layout_width="@dimen/margin_4"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_songs_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_4"
+                android:paddingBottom="@dimen/margin_4"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:text="수록곡" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_songs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -11,6 +11,7 @@ import net.dudmy.dicdol.R
 import net.dudmy.dicdol.data.Album
 import net.dudmy.dicdol.data.Artist
 import net.dudmy.dicdol.data.Group
+import net.dudmy.dicdol.ui.album.AlbumActivity
 import net.dudmy.dicdol.ui.artist.ArtistActivity
 import net.dudmy.dicdol.ui.views.GridOffsetDecoration
 import net.dudmy.dicdol.util.loadImage
@@ -81,7 +82,9 @@ class GroupDetailActivity : BaseActivity(), GroupDetailContract.View {
     }
 
     override fun showAlbumPage(album: Album) {
-        baseContext.toast("click $album")
+        startActivity(Intent(this, AlbumActivity::class.java).apply {
+            putExtra("id", album.id)
+        })
     }
 
     override fun toastFavoriteChanged(isAdded: Boolean, name: String) {
