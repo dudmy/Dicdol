@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.fragment_group.*
 import net.dudmy.dicdol.BaseFragment
 import net.dudmy.dicdol.R
@@ -95,5 +96,14 @@ class GroupFragment : BaseFragment(), GroupContract.View {
         val intent = Intent(activity, GroupDetailActivity::class.java)
         intent.putExtra("id", group.id)
         startActivityForResult(intent, REQUEST_REFRESH)
+    }
+
+    override fun clearCache() {
+        Thread(Runnable {
+            Glide.get(context).run {
+                clearMemory()
+                clearDiskCache()
+            }
+        })
     }
 }

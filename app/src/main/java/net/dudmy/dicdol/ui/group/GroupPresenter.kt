@@ -24,6 +24,7 @@ class GroupPresenter(private var view: GroupContract.View?,
 
         if (forceUpdate) {
             repository.refreshGroups()
+            view!!.clearCache()
         }
 
         repository.getGroups(object : GroupDataSource.LoadGroupsCallback {

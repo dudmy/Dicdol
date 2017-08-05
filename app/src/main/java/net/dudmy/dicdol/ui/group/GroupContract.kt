@@ -30,5 +30,7 @@ interface GroupContract {
         fun startGroupDetailPage(group: Group)
 
         fun selectCurrentButton(tag: String)
+
+        fun clearCache()
     }
 }
