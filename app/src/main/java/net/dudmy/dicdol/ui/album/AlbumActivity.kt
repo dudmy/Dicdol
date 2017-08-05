@@ -58,7 +58,7 @@ class AlbumActivity : BaseActivity(), AlbumContract.View {
             tv_day.text = it.day
             tv_publishing.text = it.publishing
             tv_agency.text = it.agency
-            tv_genre.text = it.name
+            tv_genre.text = it.genre
 
             iv_album.loadImage(it.image)
 
